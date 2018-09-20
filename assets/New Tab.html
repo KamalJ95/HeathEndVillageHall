@@ -1,0 +1,1262 @@
+
+<!-- saved from url=(0063)chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><style type="text/css">.pac-container{background-color:#fff;position:absolute!important;z-index:1000;border-radius:2px;border-top:1px solid #d9d9d9;font-family:Arial,sans-serif;box-shadow:0 2px 6px rgba(0,0,0,0.3);-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden}.pac-logo:after{content:"";padding:1px 1px 1px 0;height:18px;box-sizing:border-box;text-align:right;display:block;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png);background-position:right;background-repeat:no-repeat;background-size:120px 14px}.hdpi.pac-logo:after{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3_hdpi.png)}.pac-item{cursor:default;padding:0 4px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;line-height:30px;text-align:left;border-top:1px solid #e6e6e6;font-size:11px;color:#999}.pac-item:hover{background-color:#fafafa}.pac-item-selected,.pac-item-selected:hover{background-color:#ebf2fe}.pac-matched{font-weight:700}.pac-item-query{font-size:13px;padding-right:3px;color:#000}.pac-icon{width:15px;height:20px;margin-right:7px;margin-top:6px;display:inline-block;vertical-align:top;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons.png);background-size:34px}.hdpi .pac-icon{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons_hdpi.png)}.pac-icon-search{background-position:-1px -1px}.pac-item-selected .pac-icon-search{background-position:-18px -1px}.pac-icon-marker{background-position:-1px -161px}.pac-item-selected .pac-icon-marker{background-position:-18px -161px}.pac-placeholder{color:gray}
+</style>
+    <title>New Tab</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/styles/aurora-min.css">
+    <link rel="shortcut icon" href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/icons/icon-32.png" type="image/x-icon">
+<script async="" src="./New Tab_files/analytics.js.download"></script><script type="text/javascript" charset="UTF-8" src="./New Tab_files/common.js.download"></script><script type="text/javascript" charset="UTF-8" src="./New Tab_files/util.js.download"></script><script type="text/javascript" charset="UTF-8" src="./New Tab_files/controls.js.download"></script><script type="text/javascript" charset="UTF-8" src="./New Tab_files/places_impl.js.download"></script><script type="text/javascript" charset="UTF-8" src="./New Tab_files/geocoder.js.download"></script><script type="text/javascript" charset="UTF-8" src="./New Tab_files/stats.js.download"></script><script type="text/javascript" charset="UTF-8" src="./New Tab_files/AuthenticationService.Authenticate"></script></head>
+
+<body style="background-color: rgb(0, 0, 0); visibility: visible;">
+    <div id="auroraWallpaper">
+      <img src="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/images/empty.png" data-src="">
+    </div>
+    <img src="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/images/aurora-logo.svg" id="auroraLogo">
+
+    <ul id="auroraMenu">
+        <li><a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" id="sliderBookmarks" class="slider-menu-item active" data-slide="0">Bookmarks</a></li>
+        <li><a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" id="sliderSearch" class="slider-menu-item" data-slide="1">Dashboard</a></li>
+        <li><a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" id="sliderHistory" class="slider-menu-item" data-slide="2">History</a></li>
+        <li><a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" id="openTodo">To-Do</a></li>
+        <li><a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" id="newNote">Note</a></li>
+        <!-- <li><a href id="openFeedback">Feedback</a></li> -->
+        <li><a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" id="openRating" class="slider-menu-icon"><i id="ratingStar" class="material-icons starpulse" title="Rate Extension">star</i></a></li>
+        <li><a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" id="openApps" class="slider-menu-icon" title="Apps"><i class="material-icons">apps</i></a></li>
+        <li><a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" id="openSettings" class="slider-menu-icon" title="Settings"><i class="material-icons">settings</i></a></li>
+    </ul>
+    <div class="bx-wrapper" style="max-width: 100%;"><div class="bx-viewport" aria-live="polite" style="width: 100%; overflow: hidden; position: relative; height: 925px;"><ul id="auroraSlides" style="width: 3215%; position: relative; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
+        <li aria-hidden="false" style="float: left; list-style: none; position: relative; width: 1920px;">
+            <div id="bookmarksContainer" class="slide-container" style="visibility: visible;">
+                <div id="tabNavigation">
+                  <div class="container">
+                    <div class="columns">
+                      <div class="column col-12">
+                        <ul class="menu list-accent">
+                          <li class="menu-item menu-item-title">
+                            <div class="tile">
+                              <div class="tile-content">
+                                Boards
+                                <a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" id="openBfaq" title="How to manage boards?">
+                                  <i class="material-icons material-icon-hover float-right">info_outline</i>
+                                </a>
+                                <span class="float-right">&nbsp;</span>
+                                <a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" id="bookmarksRefresh" title="Refresh boards">
+                                  <i class="material-icons material-icon-hover float-right">refresh</i>
+                                </a>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="divider"></li>
+                          <div id="tabLeftNavigationContainer">
+                            <div id="tabLeftNavigation">
+<li class="menu-item nav-tab active" data-tab="31">
+  <a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html#" class="menu-item-url">All</a>
+</li>
+</div>
+                          </div>
+                          <li class="divider"></li>
+                          <button id="openBookmarkManager" class="btn btn-block btn-accent btn-on-accent">Edit Bookmarks</button>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="tabContainer">
+<div id="31" class="tab-content active">
+  <div class="container">
+    <div class="columns" data-columns="31">
+      <div class="column col-4" data-column="1">
+<ul class="menu list-accent" data-list="23">
+    <li class="menu-item menu-item-title menu-item-title-editable">
+        <div class="title">
+            <div data-bookmarks-title="23" class="tile-content title-list title-list-collapsable">
+                <a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" data-list-edit="23" class="title-list-edit float-right" title="Edit Board">
+                  <i class="material-icons">edit</i>
+                </a>
+                <a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" data-list-open="23" class="title-list-all float-right" title="Open All Bookmarks">
+                  <i class="material-icons">reply_all</i>
+                </a>
+                <span>Cvent</span>
+            </div>
+        </div>
+    </li>
+    <li class="divider"></li>
+    <div data-bookmarks="23" class="bookmarks-list open showLists">
+<li class="menu-item" data-bookmark-li="22">
+    <a href="https://federate-qa.xh1.lilly.com/idp/startSSO.ping?PartnerSpId=www.cvent.com" class="menu-item-url tip" data-bookmark="22" data-tip="federate-qa.xh1.lilly.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Ffederate-qa.xh1.lilly.com%2Fidp%2FstartSSO.ping%3FPartnerSpId%3Dwww.cvent.com&#39;)"></i> Events
+    </a>
+</li>
+
+<li class="menu-item" data-bookmark-li="35">
+    <a href="https://federate-qa.xh1.lilly.com/idp/gWrDH/resumeSAML20/idp/startSSO.ping" class="menu-item-url tip" data-bookmark="35" data-tip="federate-qa.xh1.lilly.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Ffederate-qa.xh1.lilly.com%2Fidp%2FgWrDH%2FresumeSAML20%2Fidp%2FstartSSO.ping&#39;)"></i> Test Environment
+    </a>
+</li>
+
+<li class="menu-item" data-bookmark-li="53">
+    <a href="https://federate-qa.xh1.lilly.com/idp/HQteT/resumeSAML20/idp/startSSO.ping" class="menu-item-url tip" data-bookmark="53" data-tip="federate-qa.xh1.lilly.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Ffederate-qa.xh1.lilly.com%2Fidp%2FHQteT%2FresumeSAML20%2Fidp%2FstartSSO.ping&#39;)"></i> Cvent Meeting Planner SSO
+    </a>
+</li>
+
+<li class="menu-item" data-bookmark-li="54">
+    <a href="https://federate-qa.xh1.lilly.com/idp/startSSO.ping?PartnerSpId=www.cvent1.com" class="menu-item-url tip" data-bookmark="54" data-tip="federate-qa.xh1.lilly.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Ffederate-qa.xh1.lilly.com%2Fidp%2FstartSSO.ping%3FPartnerSpId%3Dwww.cvent1.com&#39;)"></i> Cvent Meeting Requests Form Portal
+    </a>
+</li>
+
+<li class="menu-item" data-bookmark-li="75">
+    <a href="https://support.cvent.com/servlet/fileField?retURL=%2Fapex%2FCommunityArticle%3Fid%3D000002980&amp;entityId=ka11N000000Jof7QAC&amp;field=Download_File__Body__s" class="menu-item-url tip" data-bookmark="75" data-tip="support.cvent.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Fsupport.cvent.com%2Fservlet%2FfileField%3FretURL%3D%252Fapex%252FCommunityArticle%253Fid%253D000002980%26entityId%3Dka11N000000Jof7QAC%26field%3DDownload_File__Body__s&#39;)"></i> Google Analytics for Cvent
+    </a>
+</li>
+
+<li class="menu-item" data-bookmark-li="76">
+    <a href="https://www.tableau.com/" class="menu-item-url tip" data-bookmark="76" data-tip="www.tableau.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Fwww.tableau.com%2F&#39;)"></i> Business Intelligence and Analytics | Tableau Software
+    </a>
+</li>
+</div>
+</ul>
+
+<ul class="menu list-accent" data-list="42">
+    <li class="menu-item menu-item-title menu-item-title-editable">
+        <div class="title">
+            <div data-bookmarks-title="42" class="tile-content title-list title-list-collapsable">
+                <a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" data-list-edit="42" class="title-list-edit float-right" title="Edit Board">
+                  <i class="material-icons">edit</i>
+                </a>
+                <a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" data-list-open="42" class="title-list-all float-right" title="Open All Bookmarks">
+                  <i class="material-icons">reply_all</i>
+                </a>
+                <span>CMS Stand Up</span>
+            </div>
+        </div>
+    </li>
+    <li class="divider"></li>
+    <div data-bookmarks="42" class="bookmarks-list open showLists">
+<li class="menu-item" data-bookmark-li="15">
+    <a href="https://cirr-kanboard.herokuapp.com/dashboard/1146" class="menu-item-url tip" data-bookmark="15" data-tip="cirr-kanboard.herokuapp.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Fcirr-kanboard.herokuapp.com%2Fdashboard%2F1146&#39;)"></i> Kanboard
+    </a>
+</li>
+</div>
+</ul>
+
+<ul class="menu list-accent" data-list="69">
+    <li class="menu-item menu-item-title menu-item-title-editable">
+        <div class="title">
+            <div data-bookmarks-title="69" class="tile-content title-list title-list-collapsable">
+                <a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" data-list-edit="69" class="title-list-edit float-right" title="Edit Board">
+                  <i class="material-icons">edit</i>
+                </a>
+                <a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" data-list-open="69" class="title-list-all float-right" title="Open All Bookmarks">
+                  <i class="material-icons">reply_all</i>
+                </a>
+                <span>Programming</span>
+            </div>
+        </div>
+    </li>
+    <li class="divider"></li>
+    <div data-bookmarks="69" class="bookmarks-list open showLists">
+<li class="menu-item" data-bookmark-li="70">
+    <a href="https://www.lynda.com/React-js-tutorials/Welcome/599632/652922-4.html" class="menu-item-url tip" data-bookmark="70" data-tip="www.lynda.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Fwww.lynda.com%2FReact-js-tutorials%2FWelcome%2F599632%2F652922-4.html&#39;)"></i> React JS
+    </a>
+</li>
+
+<li class="menu-item" data-bookmark-li="100">
+    <a href="https://www.contentful.com/blog/2018/04/09/foolproof-guide-getting-started-contentful/" class="menu-item-url tip" data-bookmark="100" data-tip="www.contentful.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Fwww.contentful.com%2Fblog%2F2018%2F04%2F09%2Ffoolproof-guide-getting-started-contentful%2F&#39;)"></i> The most foolproof way to get started with Contentful
+    </a>
+</li>
+</div>
+</ul>
+
+<ul class="menu list-accent" data-list="95">
+    <li class="menu-item menu-item-title menu-item-title-editable">
+        <div class="title">
+            <div data-bookmarks-title="95" class="tile-content title-list title-list-collapsable">
+                <a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" data-list-edit="95" class="title-list-edit float-right" title="Edit Board">
+                  <i class="material-icons">edit</i>
+                </a>
+                <a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" data-list-open="95" class="title-list-all float-right" title="Open All Bookmarks">
+                  <i class="material-icons">reply_all</i>
+                </a>
+                <span>Personal Brand</span>
+            </div>
+        </div>
+    </li>
+    <li class="divider"></li>
+    <div data-bookmarks="95" class="bookmarks-list open showLists">
+<li class="menu-item" data-bookmark-li="73">
+    <a href="https://www.123test.com/jung-typology/" class="menu-item-url tip" data-bookmark="73" data-tip="www.123test.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Fwww.123test.com%2Fjung-typology%2F&#39;)"></i> Jung typology - 16 personalities
+    </a>
+</li>
+
+<li class="menu-item" data-bookmark-li="72">
+    <a href="http://www.agilecoach.ca/wp-content/uploads/2013/01/197h3doqcx941jpg.jpg" class="menu-item-url tip" data-bookmark="72" data-tip="www.agilecoach.ca" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=http%3A%2F%2Fwww.agilecoach.ca%2Fwp-content%2Fuploads%2F2013%2F01%2F197h3doqcx941jpg.jpg&#39;)"></i> ENFJ/Myers Briggs
+    </a>
+</li>
+
+<li class="menu-item" data-bookmark-li="96">
+    <a href="https://www.gallupstrengthscenter.com/signin?ReturnUrl=%2fdashboard%2fen-us%2fcsf" class="menu-item-url tip" data-bookmark="96" data-tip="www.gallupstrengthscenter.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Fwww.gallupstrengthscenter.com%2Fsignin%3FReturnUrl%3D%252fdashboard%252fen-us%252fcsf&#39;)"></i> Sign In | Gallup
+    </a>
+</li>
+</div>
+</ul>
+</div>
+      <div class="column col-4" data-column="2">
+<ul class="menu list-accent" data-list="7">
+    <li class="menu-item menu-item-title menu-item-title-editable">
+        <div class="title">
+            <div data-bookmarks-title="7" class="tile-content title-list title-list-collapsable">
+                <a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" data-list-edit="7" class="title-list-edit float-right" title="Edit Board">
+                  <i class="material-icons">edit</i>
+                </a>
+                <a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" data-list-open="7" class="title-list-all float-right" title="Open All Bookmarks">
+                  <i class="material-icons">reply_all</i>
+                </a>
+                <span>General</span>
+            </div>
+        </div>
+    </li>
+    <li class="divider"></li>
+    <div data-bookmarks="7" class="bookmarks-list open showLists">
+<li class="menu-item" data-bookmark-li="8">
+    <a href="https://now.lilly.com/" class="menu-item-url tip" data-bookmark="8" data-tip="now.lilly.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Fnow.lilly.com%2F&#39;)"></i> LillyNow
+    </a>
+</li>
+
+<li class="menu-item" data-bookmark-li="11">
+    <a href="https://www.globoforce.net/microsites/t/home?client=lilly" class="menu-item-url tip" data-bookmark="11" data-tip="www.globoforce.net" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Fwww.globoforce.net%2Fmicrosites%2Ft%2Fhome%3Fclient%3Dlilly&#39;)"></i> Lilly Inspire
+    </a>
+</li>
+
+<li class="menu-item" data-bookmark-li="16">
+    <a href="https://lilly.ent.box.com/folder/0" class="menu-item-url tip" data-bookmark="16" data-tip="lilly.ent.box.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Flilly.ent.box.com%2Ffolder%2F0&#39;)"></i> Lilly Box
+    </a>
+</li>
+
+<li class="menu-item" data-bookmark-li="18">
+    <a href="http://lillynet.global.lilly.com/sites/LP/Emply_Country/UK/Lilly%20House%20Shuttle%20Bus%20Timetable.pdf" class="menu-item-url tip" data-bookmark="18" data-tip="lillynet.global.lilly.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=http%3A%2F%2Flillynet.global.lilly.com%2Fsites%2FLP%2FEmply_Country%2FUK%2FLilly%2520House%2520Shuttle%2520Bus%2520Timetable.pdf&#39;)"></i> Lilly House Shuttle Bus Timetable.pdf
+    </a>
+</li>
+
+<li class="menu-item" data-bookmark-li="39">
+    <a href="https://www.fieldglass.net/" class="menu-item-url tip" data-bookmark="39" data-tip="www.fieldglass.net" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Fwww.fieldglass.net%2F&#39;)"></i> SAP Fieldglass Login
+    </a>
+</li>
+
+<li class="menu-item" data-bookmark-li="44">
+    <a href="http://lilly-ema.rf.lilly.com/sites/SiteServices/Restaurant/SitePages/Daily%20Menu.aspx" class="menu-item-url tip" data-bookmark="44" data-tip="lilly-ema.rf.lilly.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=http%3A%2F%2Flilly-ema.rf.lilly.com%2Fsites%2FSiteServices%2FRestaurant%2FSitePages%2FDaily%2520Menu.aspx&#39;)"></i> Lilly House - Resturant Menu
+    </a>
+</li>
+
+<li class="menu-item" data-bookmark-li="45">
+    <a href="https://gso--c.eu8.visual.force.com/apex/GLBL_SBLD_TPage_07?id=a7Db0000000Kyks&amp;content=a7Ab00000008PAW#" class="menu-item-url tip" data-bookmark="45" data-tip="gso--c.eu8.visual.force.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Fgso--c.eu8.visual.force.com%2Fapex%2FGLBL_SBLD_TPage_07%3Fid%3Da7Db0000000Kyks%26content%3Da7Ab00000008PAW%23&#39;)"></i> Enterprise Arch
+    </a>
+</li>
+
+<li class="menu-item" data-bookmark-li="46">
+    <a href="http://lillynetcollaboration.global.lilly.com/sites/GS_CMS/Shared%20Documents/Forms/AllItems.aspx" class="menu-item-url tip" data-bookmark="46" data-tip="lillynetcollaboration.global.lilly.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=http%3A%2F%2Flillynetcollaboration.global.lilly.com%2Fsites%2FGS_CMS%2FShared%2520Documents%2FForms%2FAllItems.aspx&#39;)"></i> GS Documents
+    </a>
+</li>
+
+<li class="menu-item" data-bookmark-li="50">
+    <a href="https://ix1rglsgbpa1.am.lilly.com:8080/dca" class="menu-item-url tip" data-bookmark="50" data-tip="ix1rglsgbpa1.am.lilly.com:8080" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Fix1rglsgbpa1.am.lilly.com%3A8080%2Fdca&#39;)"></i> GBIP Regulus
+    </a>
+</li>
+
+<li class="menu-item" data-bookmark-li="52">
+    <a href="https://lsef.lilly.com/" class="menu-item-url tip" data-bookmark="52" data-tip="lsef.lilly.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Flsef.lilly.com%2F&#39;)"></i> Lilly Systems Engineering Framework
+    </a>
+</li>
+
+<li class="menu-item" data-bookmark-li="55">
+    <a href="https://gso--c.eu8.visual.force.com/apex/GLBL_SBLD_Home?id=a7Db0000000Kykd" class="menu-item-url tip" data-bookmark="55" data-tip="gso--c.eu8.visual.force.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Fgso--c.eu8.visual.force.com%2Fapex%2FGLBL_SBLD_Home%3Fid%3Da7Db0000000Kykd&#39;)"></i> UK IT Student Program
+    </a>
+</li>
+
+<li class="menu-item" data-bookmark-li="61">
+    <a href="http://lillynet.global.lilly.com/sites/PollEverywhereSite/Pages/Home.aspx" class="menu-item-url tip" data-bookmark="61" data-tip="lillynet.global.lilly.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=http%3A%2F%2Flillynet.global.lilly.com%2Fsites%2FPollEverywhereSite%2FPages%2FHome.aspx&#39;)"></i> Poll Everywhere
+    </a>
+</li>
+
+<li class="menu-item" data-bookmark-li="66">
+    <a href="file:///C:/Users/C268248/Downloads/Mercury%20-%20Security%20Plan-1254.pdf" class="menu-item-url tip" data-bookmark="66" data-tip="" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;undefined&#39;)"></i> Mercury - Security Plan-1254.pdf
+    </a>
+</li>
+
+<li class="menu-item" data-bookmark-li="67">
+    <a href="https://www.lynda.com/" class="menu-item-url tip" data-bookmark="67" data-tip="www.lynda.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Fwww.lynda.com%2F&#39;)"></i> Learn a New Skill Online, on Your Time
+    </a>
+</li>
+
+<li class="menu-item" data-bookmark-li="78">
+    <a href="https://dot-jira.lilly.com/secure/Dashboard.jspa" class="menu-item-url tip" data-bookmark="78" data-tip="dot-jira.lilly.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Fdot-jira.lilly.com%2Fsecure%2FDashboard.jspa&#39;)"></i> JIRA Dashboard
+    </a>
+</li>
+
+<li class="menu-item" data-bookmark-li="80">
+    <a href="https://dot-jira.lilly.com/plugins/servlet/project-config/CMSIT/roles" class="menu-item-url tip" data-bookmark="80" data-tip="dot-jira.lilly.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Fdot-jira.lilly.com%2Fplugins%2Fservlet%2Fproject-config%2FCMSIT%2Froles&#39;)"></i> Users and roles - JIRA
+    </a>
+</li>
+
+<li class="menu-item" data-bookmark-li="94">
+    <a href="https://app.roadmunk.com/#/roadmap/all-roadmaps" class="menu-item-url tip" data-bookmark="94" data-tip="app.roadmunk.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Fapp.roadmunk.com%2F%23%2Froadmap%2Fall-roadmaps&#39;)"></i> Roadmunk
+    </a>
+</li>
+
+<li class="menu-item" data-bookmark-li="98">
+    <a href="https://shield.lilly.com/training" class="menu-item-url tip" data-bookmark="98" data-tip="shield.lilly.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Fshield.lilly.com%2Ftraining&#39;)"></i> Protect Lilly Shield
+    </a>
+</li>
+</div>
+</ul>
+
+<ul class="menu list-accent" data-list="43">
+    <li class="menu-item menu-item-title menu-item-title-editable">
+        <div class="title">
+            <div data-bookmarks-title="43" class="tile-content title-list title-list-collapsable">
+                <a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" data-list-edit="43" class="title-list-edit float-right" title="Edit Board">
+                  <i class="material-icons">edit</i>
+                </a>
+                <a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" data-list-open="43" class="title-list-all float-right" title="Open All Bookmarks">
+                  <i class="material-icons">reply_all</i>
+                </a>
+                <span>Operational Requirements</span>
+            </div>
+        </div>
+    </li>
+    <li class="divider"></li>
+    <div data-bookmarks="43" class="bookmarks-list open showLists">
+<li class="menu-item" data-bookmark-li="20">
+    <a href="https://idmportal.rf.lilly.com/IdentityManagement/aspx/groups/MyDLMemberships.aspx" class="menu-item-url tip" data-bookmark="20" data-tip="idmportal.rf.lilly.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Fidmportal.rf.lilly.com%2FIdentityManagement%2Faspx%2Fgroups%2FMyDLMemberships.aspx&#39;)"></i> Group Permissions
+    </a>
+</li>
+
+<li class="menu-item" data-bookmark-li="56">
+    <a href="https://gso--c.eu8.visual.force.com/apex/GLBL_SBLD_Home?id=a7Db0000000KyjaEAC" class="menu-item-url tip" data-bookmark="56" data-tip="gso--c.eu8.visual.force.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Fgso--c.eu8.visual.force.com%2Fapex%2FGLBL_SBLD_Home%3Fid%3Da7Db0000000KyjaEAC&#39;)"></i> My CMS
+    </a>
+</li>
+</div>
+</ul>
+
+<ul class="menu list-accent" data-list="58">
+    <li class="menu-item menu-item-title menu-item-title-editable">
+        <div class="title">
+            <div data-bookmarks-title="58" class="tile-content title-list title-list-collapsable">
+                <a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" data-list-edit="58" class="title-list-edit float-right" title="Edit Board">
+                  <i class="material-icons">edit</i>
+                </a>
+                <a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" data-list-open="58" class="title-list-all float-right" title="Open All Bookmarks">
+                  <i class="material-icons">reply_all</i>
+                </a>
+                <span>Music</span>
+            </div>
+        </div>
+    </li>
+    <li class="divider"></li>
+    <div data-bookmarks="58" class="bookmarks-list open showLists">
+<li class="menu-item" data-bookmark-li="57">
+    <a href="https://open.spotify.com/browse/featured" class="menu-item-url tip" data-bookmark="57" data-tip="open.spotify.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Fopen.spotify.com%2Fbrowse%2Ffeatured&#39;)"></i> Spotify
+    </a>
+</li>
+</div>
+</ul>
+</div>
+      <div class="column col-4" data-column="3">
+<ul class="menu list-accent" data-list="37">
+    <li class="menu-item menu-item-title menu-item-title-editable">
+        <div class="title">
+            <div data-bookmarks-title="37" class="tile-content title-list title-list-collapsable">
+                <a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" data-list-edit="37" class="title-list-edit float-right" title="Edit Board">
+                  <i class="material-icons">edit</i>
+                </a>
+                <a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" data-list-open="37" class="title-list-all float-right" title="Open All Bookmarks">
+                  <i class="material-icons">reply_all</i>
+                </a>
+                <span>Training Environments</span>
+            </div>
+        </div>
+    </li>
+    <li class="divider"></li>
+    <div data-bookmarks="37" class="bookmarks-list open showLists">
+<li class="menu-item" data-bookmark-li="30">
+    <a href="https://gso--merctest2.cs84.my.salesforce.com/home/home.jsp" class="menu-item-url tip" data-bookmark="30" data-tip="gso--merctest2.cs84.my.salesforce.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Fgso--merctest2.cs84.my.salesforce.com%2Fhome%2Fhome.jsp&#39;)"></i> Merctest2
+    </a>
+</li>
+
+<li class="menu-item" data-bookmark-li="33">
+    <a href="https://gso--gso1trn.cs89.my.salesforce.com/home/home.jsp" class="menu-item-url tip" data-bookmark="33" data-tip="gso--gso1trn.cs89.my.salesforce.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Fgso--gso1trn.cs89.my.salesforce.com%2Fhome%2Fhome.jsp&#39;)"></i> GSOTRN
+    </a>
+</li>
+
+<li class="menu-item" data-bookmark-li="40">
+    <a href="https://gso.my.salesforce.com/home/home.jsp?sdtd=1" class="menu-item-url tip" data-bookmark="40" data-tip="gso.my.salesforce.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Fgso.my.salesforce.com%2Fhome%2Fhome.jsp%3Fsdtd%3D1&#39;)"></i> GSO1PROD
+    </a>
+</li>
+
+<li class="menu-item" data-bookmark-li="12">
+    <a href="https://elilily.plateau.com/learning/user/ssoLogin.do" class="menu-item-url tip" data-bookmark="12" data-tip="elilily.plateau.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Felilily.plateau.com%2Flearning%2Fuser%2FssoLogin.do&#39;)"></i> Training Plans
+    </a>
+</li>
+
+<li class="menu-item" data-bookmark-li="51">
+    <a href="https://cms-stage.lilly.com/" class="menu-item-url tip" data-bookmark="51" data-tip="cms-stage.lilly.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Fcms-stage.lilly.com%2F&#39;)"></i> Web Service STG Environment
+    </a>
+</li>
+</div>
+</ul>
+
+<ul class="menu list-accent" data-list="47">
+    <li class="menu-item menu-item-title menu-item-title-editable">
+        <div class="title">
+            <div data-bookmarks-title="47" class="tile-content title-list title-list-collapsable">
+                <a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" data-list-edit="47" class="title-list-edit float-right" title="Edit Board">
+                  <i class="material-icons">edit</i>
+                </a>
+                <a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" data-list-open="47" class="title-list-all float-right" title="Open All Bookmarks">
+                  <i class="material-icons">reply_all</i>
+                </a>
+                <span>Support</span>
+            </div>
+        </div>
+    </li>
+    <li class="divider"></li>
+    <div data-bookmarks="47" class="bookmarks-list open showLists">
+<li class="menu-item" data-bookmark-li="48">
+    <a href="https://lilly.service-now.com/ess/deep_link.do?sysparm_content_url=%2F$dashboards.do%3Fsysparm_dashboard%3Dcc1b9f5adb4d5fc47463f9aeaf9619c5" class="menu-item-url tip" data-bookmark="48" data-tip="lilly.service-now.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Flilly.service-now.com%2Fess%2Fdeep_link.do%3Fsysparm_content_url%3D%252F%24dashboards.do%253Fsysparm_dashboard%253Dcc1b9f5adb4d5fc47463f9aeaf9619c5&#39;)"></i> CMS IT Support Dashboard
+    </a>
+</li>
+
+<li class="menu-item" data-bookmark-li="49">
+    <a href="https://lilly.service-now.com/$dashboards.do?sysparm_dashboard=cc1b9f5adb4d5fc47463f9aeaf9619c5&amp;sysparm_tab=b9ab53dedb4d5fc47463f9aeaf9619ae&amp;sysparm_cancelable=true&amp;sysparm_editable=false&amp;sysparm_active_panel=false" class="menu-item-url tip" data-bookmark="49" data-tip="lilly.service-now.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Flilly.service-now.com%2F%24dashboards.do%3Fsysparm_dashboard%3Dcc1b9f5adb4d5fc47463f9aeaf9619c5%26sysparm_tab%3Db9ab53dedb4d5fc47463f9aeaf9619ae%26sysparm_cancelable%3Dtrue%26sysparm_editable%3Dfalse%26sysparm_active_panel%3Dfalse&#39;)"></i> CMS IT Dashboard | ServiceNow
+    </a>
+</li>
+</div>
+</ul>
+
+<ul class="menu list-accent" data-list="87">
+    <li class="menu-item menu-item-title menu-item-title-editable">
+        <div class="title">
+            <div data-bookmarks-title="87" class="tile-content title-list title-list-collapsable">
+                <a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" data-list-edit="87" class="title-list-edit float-right" title="Edit Board">
+                  <i class="material-icons">edit</i>
+                </a>
+                <a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" data-list-open="87" class="title-list-all float-right" title="Open All Bookmarks">
+                  <i class="material-icons">reply_all</i>
+                </a>
+                <span>myAccess Cvent Implementation</span>
+            </div>
+        </div>
+    </li>
+    <li class="divider"></li>
+    <div data-bookmarks="87" class="bookmarks-list open showLists">
+<li class="menu-item" data-bookmark-li="85">
+    <a href="https://www.sailpoint.com/" class="menu-item-url tip" data-bookmark="85" data-tip="www.sailpoint.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Fwww.sailpoint.com%2F&#39;)"></i> Identity Governance &amp; Cloud Identity Management Software | SailPoint
+    </a>
+</li>
+
+<li class="menu-item" data-bookmark-li="88">
+    <a href="http://lillynetcollaboration.global.lilly.com/sites/myAccess/SitePages/Home.aspx" class="menu-item-url tip" data-bookmark="88" data-tip="lillynetcollaboration.global.lilly.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=http%3A%2F%2Flillynetcollaboration.global.lilly.com%2Fsites%2FmyAccess%2FSitePages%2FHome.aspx&#39;)"></i> myAccess@Lilly Service Site - Home
+    </a>
+</li>
+
+<li class="menu-item" data-bookmark-li="89">
+    <a href="https://lilly.service-now.com/ess/view_content_search.do?v=1&amp;uri=com.glideapp.servicecatalog_cat_item_view.do%3Fv%3D1%26sysparm_id%3Db63b0fec0fb7f10028ed6509b1050ed0%26sysparm_link_parent%3D6313147a3553f00014379b119de0702d%26sysparm_catalog%3De0d08b13c3330100c8b837659bba8fb4&amp;sysparm_document_key=sc_cat_item,b63b0fec0fb7f10028ed6509b1050ed0" class="menu-item-url tip" data-bookmark="89" data-tip="lilly.service-now.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Flilly.service-now.com%2Fess%2Fview_content_search.do%3Fv%3D1%26uri%3Dcom.glideapp.servicecatalog_cat_item_view.do%253Fv%253D1%2526sysparm_id%253Db63b0fec0fb7f10028ed6509b1050ed0%2526sysparm_link_parent%253D6313147a3553f00014379b119de0702d%2526sysparm_catalog%253De0d08b13c3330100c8b837659bba8fb4%26sysparm_document_key%3Dsc_cat_item%2Cb63b0fec0fb7f10028ed6509b1050ed0&#39;)"></i> Employee Self-Service Portal - Service-now.com
+    </a>
+</li>
+
+<li class="menu-item" data-bookmark-li="90">
+    <a href="https://idmportal.rf.lilly.com/IdentityManagement/default.aspx" class="menu-item-url tip" data-bookmark="90" data-tip="idmportal.rf.lilly.com" target="_blank">
+        <i class="menu-item-favicon" style="background-image: url(&#39;http://www.google.com/s2/favicons?domain_url=https%3A%2F%2Fidmportal.rf.lilly.com%2FIdentityManagement%2Fdefault.aspx&#39;)"></i> AD Groups
+    </a>
+</li>
+</div>
+</ul>
+</div>
+    </div>
+  </div>
+</div>
+</div>
+            </div>
+            
+        </li>
+        <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 1920px;">
+            <div id="searchTimeContainer" class="slide-container">
+              <div id="searchTimeMiddleContainer">
+                <div id="timeDate">
+<h1>15:16</h1>
+<h3><strong>Tuesday,</strong> 18th September</h3>
+</div>
+                <form id="googleSearch">
+                  <span id="googleIcon"></span>
+                  <input id="googleSearchInput" tabindex="1" x-webkit-speech="" autocomplete="off">
+                  <span id="googleSearchBar"></span>
+                  <i id="googleMicIcon" class="material-icons" title="Search by voice">mic_none</i>
+                </form>
+              </div>
+            
+              <div id="featuredBookmarksContainer">
+<div class="empty ">
+  <div class="empty-icon"></div>
+  <h4 class="empty-title">No Featured Bookmarks</h4>
+  <p class="empty-subtitle">To start, open the Bookmarks tab and click <strong>Edit Bookmarks</strong> button.<br>Move or Add your bookmarks to the <strong>*Aurora Featured*</strong> folder.<br><small>You can disable this feature in the settings window.<small></small></small></p><small><small>
+  
+</small></small></div><small><small>
+</small></small></div>
+            
+              <div id="localTodo" style="display: none;">
+                <div class="todo-header">
+                  <span class="todo-counter">To-Do (<span id="localTodoCounter">0</span>)</span>
+                  <span class="todo-status"></span>
+                </div>
+                <ul id="todoList" class="ui-sortable"></ul>
+                <form id="todolistForm">
+                  <div class="divider light"></div>
+                  <input class="form-input" type="text" name="todo" placeholder="New to-do..." id="todobox">
+                </form>
+              </div>
+            
+              <div id="weatherToday">
+<div class="weather-icon icon-23"></div>
+<div class="weather-temperature">19°</div>
+<div class="weather-summary">
+    <h4>Breezy</h4>
+    <span><strong>Basingstoke</strong>,  England</span>
+    <span><i class="weather-wind-direction WSW" title="Wind: WSW"></i>46.67 mph</span>
+</div>
+</div>
+              <div id="weatherForecast">
+<div class="weather-forecast-item">
+  <h4>Wed</h4>
+  <div class="weather-forecast-icon icon-12">
+  </div>
+  <div class="weather-forecast-temperature">
+  <strong>21°</strong>&nbsp;16°</div>
+</div>
+
+<div class="weather-forecast-item">
+  <h4>Thu</h4>
+  <div class="weather-forecast-icon icon-39">
+  </div>
+  <div class="weather-forecast-temperature">
+  <strong>20°</strong>&nbsp;15°</div>
+</div>
+
+<div class="weather-forecast-item">
+  <h4>Fri</h4>
+  <div class="weather-forecast-icon icon-11">
+  </div>
+  <div class="weather-forecast-temperature">
+  <strong>16°</strong>&nbsp;10°</div>
+</div>
+
+<div class="weather-forecast-item">
+  <h4>Sat</h4>
+  <div class="weather-forecast-icon icon-28">
+  </div>
+  <div class="weather-forecast-temperature">
+  <strong>15°</strong>&nbsp;7°</div>
+</div>
+
+<div class="weather-forecast-item">
+  <h4>Sun</h4>
+  <div class="weather-forecast-icon icon-28">
+  </div>
+  <div class="weather-forecast-temperature">
+  <strong>17°</strong>&nbsp;12°</div>
+</div>
+</div>
+            </div>
+            
+        </li>
+        <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 1920px;">
+            <div id="historyContainer" class="slide-container">
+                <div id="historyNavigation">
+            
+                    <div class="container">
+                        <div class="columns">
+                            <div class="column col-12">
+                                <ul class="menu list-accent">
+                                    <li class="menu-item menu-item-title">
+                                        <div class="tile">
+                                            <div class="tile-content">
+                                                Filter
+                                                <a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" id="historyRefresh" title="Refresh history"><i class="material-icons material-icon-hover float-right">refresh</i></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li class="history-text-filter">
+                                        <a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" id="historyFilterClear"><i class="icon icon-cross"></i></a>
+                                        <input id="historyTextFilter" class="form-input input" type="text" placeholder="filter by keyword...">
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li class="menu-item history-filter active">
+                                        <a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html#" class="menu-item-url" data-filter="today">Today</a>
+                                    </li>
+                                    <li class="menu-item history-filter">
+                                        <a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html#" class="menu-item-url" data-filter="yesterday">Yesterday</a>
+                                    </li>
+                                    <li class="menu-item history-filter">
+                                        <a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html#" class="menu-item-url" data-filter="week">Last Week</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <button id="openHistoryManager" class="btn btn-block btn-accent btn-on-accent">Chrome History</button>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+                <div id="historyListContainer">
+                    <div class="container">
+                        <div class="columns">
+                            <div class="column col-12">
+                                <ul class="menu list-accent">
+                                    <li class="menu-item menu-item-title">
+                                        <div class="tile">
+                                            <div class="tile-content">
+                                                History
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <div data-column="chrome-history" class="animated fadeIn"></div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </li>
+    </ul></div><div class="bx-controls bx-has-pager"><div class="bx-pager bx-default-pager"><div class="bx-pager-item"><a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" data-slide-index="0" class="bx-pager-link active">1</a></div><div class="bx-pager-item"><a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" data-slide-index="1" class="bx-pager-link">2</a></div><div class="bx-pager-item"><a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" data-slide-index="2" class="bx-pager-link">3</a></div></div></div></div>
+
+    <div id="modalAbout" class="modal modal-sm">
+      <div class="modal-overlay"></div>
+      <div class="modal-container">
+        <div class="modal-header">
+          <button class="close-modal btn btn-clear float-right"></button>
+          <div class="modal-title">About</div>
+        </div>
+        <div class="modal-body">
+          <div class="content text-center">
+    
+            <img src="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/images/aurora-icon.svg" width="128" height="128">
+            <div class="pt-10"></div>
+            <div class="pt-10"></div>
+    
+            <h4>Aurora Dashboard</h4>
+            <p>Dedicated to those who drive the world forward.</p>
+    
+            <div class="pt-10"></div>
+    
+            <small>Thanks to all photographers for sharing their amazing photos for free.<br>Created by <a href="http://rafalrutyna.com/" target="_blank">Rafal Rutyna</a>, Version <span data-ver="appVer">1.2.2</span><br>Copyright <span id="copyDate"></span> Rafal Rutyna. All Right reserved.<br>
+    
+            <a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" id="privacyPolicy">Privacy Policy</a></small>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="modalApps" class="modal modal-lg">
+          <div class="modal-overlay"></div>
+          <div class="modal-container">
+            <div class="modal-header">
+              <button id="closeApps" class="btn btn-clear float-right"></button>
+              <div class="modal-title">Apps</div>
+            </div>
+            <div class="modal-body">
+              <div class="content"></div>
+            </div>
+          </div>
+        </div>
+        
+    <div id="modalPrivacy" class="modal modal-md">
+              <div class="modal-overlay"></div>
+              <div class="modal-container">
+                <div class="modal-header">
+                  <button class="close-modal btn btn-clear float-right"></button>
+                  <div class="modal-title">Privacy Policy</div>
+                </div>
+                <div class="modal-body">
+                  <div class="content">
+            
+                    <p>This privacy policy applies to Aurora extension for Google Chrome.</p>
+                    <strong>Information gathering and usage</strong>
+            
+                    <p>We do NOT collect any personal informations stored within the extension. We collect anonymous usage data using an industry standard third party analytics service (Google Analytics) to better understand the performance of our service. The information we collect via third party services does not contain personal information. The information we collect is used to improve Aurora and the quality of our service, and is not shared with or sold to others.</p>
+                    <strong>Your data</strong>
+            
+                    <p>Aurora uses third party vendors and hosting partners to provide the necessary hardware, software, networking, storage, and related technology required to run Aurora. Although Aurora owns the code, databases, and all rights to the Aurora extension, you retain all rights to your data.</p>
+                    <strong>Security</strong>
+            
+                    <p>We make security a priority across the lifecycle. All communication with third party servers is secure, using SSL/TLS (HTTPS and HSTS).</p>
+                    <strong>Changes</strong>
+            
+                    <p>Although most changes are likely to be minor, Aurora team may change its Privacy Policy from time to time, and in Aurora's sole discretion. Aurora encourages visitors to frequently check this page for any changes to its Privacy Policy. Your continued use of this site after any change in this Privacy Policy will constitute your acceptance of such change.</p>
+                    <p>If you have any questions, please contact us via support page.</p>
+            
+                    <small>Last updated July 20th, 2017.</small>
+                    <div class="pt-10"></div>
+            
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+    <div id="modalBookmarksFaq" class="modal modal-lg">
+                  <div class="modal-overlay"></div>
+                  <div class="modal-container">
+                    <div class="modal-header">
+                      <button class="close-modal btn btn-clear float-right"></button>
+                      <div class="modal-title">Welcome to Aurora Bookmarks</div>
+                    </div>
+                    <div class="modal-body">
+                      <div class="content">
+                
+                        <h4>Basic Info</h4>
+                        <p class="text-justify">Aurora Bookmarks uses your browser bookmarks and displays them in easy to read Boards and Lists. All changes made in the Aurora Bookmarks are synced and backed up with Google. Once you have created your boards and lists you can continue
+                          to use your bookmarks as before, with the added benefit of visual categorisation.</p>
+                          <p>To start simply click on <strong>Edit Bookmarks</strong> button on the left panel and select tripple dot icon in the top right corner of the <strong>Bookmarks</strong> window, then select <strong>Add New Folder</strong>. You can drag or rename the folders in this window to create your desire board/list structure.</p>
+                
+                        <p>Correct folder structure should look like this:</p>
+                
+                        <p>
+                          <strong>
+                            <i class="material-icons folder-path">folder</i> Other Bookmarks
+                            <i class="material-icons arrow-path">arrow_forward</i>
+                            <i class="material-icons folder-path">folder</i> My Board
+                            <i class="material-icons arrow-path">arrow_forward</i>
+                            <i class="material-icons folder-path">folder</i> My List
+                            <i class="material-icons arrow-path">arrow_forward</i>
+                            <i class="material-icons star-path">star</i> My Bookmark(s)
+                          </strong>
+                        </p>
+                
+                        <div class="pt-10"></div>
+                        <div class="divider"></div>
+                        <div class="pt-10"></div>
+                
+                        <h4>Sturucture</h4>
+                
+                        <div class="container">
+                          <div class="columns">
+                            <div class="column col-6">
+                
+                              <h5>Boards</h5>
+                              <p class="text-justify">Boards are created from the first level of the <strong>Bookmarks</strong> <i class="material-icons arrow-path">arrow_forward</i> <strong>Other Bookmarks</strong> folder. The board navigation panel will only list folders and
+                                not bookmarks. If you have any bookmarks directly in <strong>Other Bookmarks</strong> folder, move them into your desired list subfolder.
+                              </p>
+                
+                            </div>
+                            <div class="column col-6">
+                
+                              <h5>Lists</h5>
+                              <p class="text-justify">Lists are created from the second level of the folders within the directory above. If you have uncategorised bookmarks within your board folder, the Aurora Bookmarks will create a list called <strong>Uncategorised</strong> where all your
+                                uncategorised bookmarks will be listed. Within a single list you can mix bookmarks as well as folders. Every next level of folders from here will be treated as a subcategory and listed as a heading.</p>
+                
+                            </div>
+                            <div class="column col-12">
+                              <div class="text-center">
+                                <img src="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/images/articles/bookmark-manager.png" class="modal-faq-img rounded">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                
+                        <div class="pt-10"></div>
+                        <div class="divider"></div>
+                        <div class="pt-10"></div>
+                
+                        <h4>Reordering</h4>
+                        <p class="text-justify">The default order of your lists is from the left to right. The order of your boards, list &amp; bookmarks reflects the folder order in the Bookmark window. In addition to the default order you have the ability to move an entire list to
+                          the next column and leave a blank space in between columns. To make a space between lists just create an empty folder within your board with the name <strong>"---"</strong>.</p>
+                          <div class="pt-10"></div>
+                
+                          <div class="text-center">
+                            <img src="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/images/articles/reorder-lists.png" class="modal-faq-img rounded">
+                          </div>
+                
+                      </div>
+                    </div>
+                    <div class="modal-footer"></div>
+                  </div>
+                </div>
+                
+    <div id="modalMicrophone" class="modal">
+                      <div class="modal-overlay voice-overlay"></div>
+                      <div class="modal-container voice-container">
+                    
+                          <div class="pulse-container">
+                            <div class="pulse-box">
+                              <svg class="pulse-svg" width="100px" height="100px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <circle class="circle first-circle" fill="#FFF" cx="25" cy="25" r="25"></circle>
+                                <circle class="circle second-circle" fill="#FFF" cx="25" cy="25" r="25"></circle>
+                                <circle class="circle third-circle" fill="#FFF" cx="25" cy="25" r="25"></circle>
+                                <circle class="circle" fill="#FFF" cx="25" cy="25" r="25"></circle>
+                                <path class="mic" fill="#21252B" d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"></path>
+                              </svg>
+                            </div>
+                              <a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" id="closeMicrophone" class="voice-close">Speak now, listening...<br><i class="material-icons">close</i></a>
+                          </div>
+                      </div>
+                    </div>
+                    
+    <div id="modalFeedback" class="modal modal-lg">
+                          <div class="modal-overlay"></div>
+                          <div class="modal-container">
+                            <div class="modal-header">
+                              <button class="close-modal btn btn-clear float-right"></button>
+                              <div class="modal-title">Feedback Forum</div>
+                            </div>
+                            <div class="modal-body">
+                              <div class="content">
+                        
+                                <div id="userReport"></div>
+                        
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+    <div id="modalTodo" class="modal modal-md">
+                              <div class="modal-overlay"></div>
+                              <div class="modal-container">
+                                <div class="modal-header">
+                                  <button class="close-modal btn btn-clear float-right"></button>
+                                  <div class="modal-title">Link To-Do List Provider</div>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="content text-center">
+                            
+                                    <div class="pt-10"></div>
+                            
+                                    <h4>Welcome to Aurora To-Do</h4>
+                                    <p>Please link your to-do list provider with Aurora.<br>If you don't have one, you can Sign Up with any of the below for free.
+                                    <br>Remember to select <strong>'Keep me signed in'</strong> if possible.</p>
+                            
+                                    <div class="pt-10"></div>
+                                    <div class="pt-10"></div>
+                            
+                                    <a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/local" data-id="Aurora" class="todo-item">
+                                      <img src="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/images/todo/AuroraToDo.svg" width="96">
+                                      <span>Aurora To-Do</span>
+                                    </a>
+                            
+                                    <a href="https://todoist.com/app" data-id="Todoist" class="todo-item">
+                                      <img src="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/images/todo/Todoist.svg" width="96">
+                                      <span>Todoist</span>
+                                    </a>
+                            
+                                    <a href="https://todo.microsoft.com/" data-id="Microsoft" class="todo-item">
+                                      <img src="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/images/todo/MicrosoftToDo.svg" width="96">
+                                      <span>Microsoft To-Do</span>
+                                    </a>
+                            
+                                    <a href="https://keep.google.com/" data-id="Google" class="todo-item">
+                                      <img src="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/images/todo/GoogleKeep.svg" width="96">
+                                      <span>Google Keep</span>
+                                    </a>
+                            
+                                    <a href="https://www.rememberthemilk.com/app/" data-id="RememberTheMilk" class="todo-item">
+                                      <img src="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/images/todo/RememberTheMilk.svg" width="96">
+                                      <span>Remember The Milk</span>
+                                    </a>
+                            
+                                    <a href="https://www.wunderlist.com/webapp" data-id="Wunderlist" class="todo-item">
+                                      <img src="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/images/todo/Wunderlist.svg" width="96">
+                                      <span>Wunderlist</span>
+                                    </a>
+                            
+                                    <div class="pt-10"></div>
+                                    <div class="pt-10"></div>
+                                    <small>You can change this selection at any time within the Settings page.</small>
+                            
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            
+    <div id="modalSettings" class="modal modal-md">
+                                  <div class="modal-overlay"></div>
+                                  <div class="modal-container">
+                                    <div class="modal-header">
+                                      <button class="close-modal btn btn-clear float-right"></button>
+                                      <div class="modal-title">Settings</div>
+                                    </div>
+                                    <div class="modal-body">
+                                      <div class="content">
+                                        <h6>General</h6>
+                                        <div class="form-horizontal">
+                                          <div class="form-group">
+                                            <div class="col-4">
+                                              <label class="form-label">Landing Page</label>
+                                            </div>
+                                            <div class="col-8">
+                                              <div id="settingDefaultSlide" class="btn-group">
+                                                <button class="btn btn-link" data-setting="slideDashboard" data-value="s1">Dashboard</button>
+                                                <button class="btn btn-link active" data-setting="slideBookmarks" data-value="s0">Bookmarks</button>
+                                                <button class="btn btn-link" data-setting="slideHistory" data-value="s2">History</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          
+                                          <div class="form-group">
+                                                      <div class="col-4">
+                                                        <label class="form-label">Clock Format</label>
+                                                      </div>
+                                                      <div class="col-8">
+                                                        <div id="settingClockFormat" class="btn-group">
+                                                          <button class="btn btn-link" data-setting="clock12" data-value="12">12 hour</button>
+                                                          <button class="btn btn-link active" data-setting="clock24" data-value="24">24 hour</button>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                    
+                                          <div class="form-group">
+                                                                <div class="col-4">
+                                                                  <label class="form-label">Show Weather</label>
+                                                                </div>
+                                                                <div class="col-8">
+                                                                  <div id="settingWeather" class="btn-group">
+                                                                    <button class="btn btn-link active" data-setting="weYes" data-value="Yes">Yes</button>
+                                                                    <button class="btn btn-link" data-setting="weNo" data-value="No">No</button>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                              <div id="showWeather">
+                                                              <div class="form-group">
+                                                                <div class="col-4">
+                                                                  <label class="form-label">Weather Units</label>
+                                                                </div>
+                                                                <div class="col-8">
+                                                                  <div id="settingWeatherUnits" class="btn-group">
+                                                                    <button class="btn btn-link active" data-setting="wunitC" data-value="C">°C</button>
+                                                                    <button class="btn btn-link" data-setting="wunitF" data-value="F">°F</button>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                              
+                                                              <div class="form-group">
+                                                                <div class="col-4">
+                                                                  <label class="form-label">Weather Location</label>
+                                                                </div>
+                                                                <div class="col-8">
+                                                                  <div id="settingWeatherLocation" class="btn-group">
+                                                                    <button class="btn btn-link active" data-setting="wlAuto" data-value="Auto">Auto</button>
+                                                                    <button class="btn btn-link" data-setting="wlCustom" data-value="Custom">Custom</button>
+                                                                  </div>
+                                                                  <div class="pt-10"></div>
+                                                                  <div id="customWeatherLocation" style="display: none;">
+                                                                    <div class="input-group">
+                                                                      <button id="clearCustomWeather" class="btn btn-default input-group-btn"><i class="icon icon-cross"></i></button>
+                                                                      <input class="form-input" type="text" data-setting="customWeatherLocation" placeholder="Enter city name..." autocomplete="off">
+                                                                    </div>
+                                                                  </div>
+                                                                  <small><strong>Info: </strong>If the weather won't refresh itsealf automatically, click <a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" id="refreshWeather">here</a>.</small>
+                                                                </div>
+                                                              </div>
+                                                              
+                                                              <div class="form-group">
+                                                                <div class="col-4">
+                                                                  <label class="form-label">Wind Units</label>
+                                                                </div>
+                                                                <div class="col-8">
+                                                                  <div id="settingWindUnits" class="btn-group">
+                                                                    <select class="form-select">
+                                                                        <option value="Auto" selected="">Auto</option>
+                                                                        <option value="mph">mph</option>
+                                                                        <option value="km/h">km/h</option>
+                                                                        <option value="m/s">m/s</option>
+                                                                        <option value="knots">Knots</option>
+                                                                        <option value="bft">Beaufort</option>
+                                                                      </select>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                              
+                                                              </div>
+                                                              
+                                        </div>
+                                
+                                        <div class="divider"></div>
+                                        <div class="pt-10"></div>
+                                        <h6>Bookmarks</h6>
+                                        <div class="form-horizontal">
+                                          <div class="form-group">
+                                            <div class="col-4">
+                                              <label class="form-label">Open Bookmarks</label>
+                                            </div>
+                                            <div class="col-8">
+                                              <div id="settingOpenBookmarks" class="btn-group">
+                                                <button class="btn btn-link" data-setting="self" data-value="_self">Current Tab</button>
+                                                <button class="btn btn-link active" data-setting="blank" data-value="_blank">New Tab</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          
+                                          <div class="form-group">
+                                            <div class="col-4">
+                                              <label class="form-label">Featured Bookmarks</label>
+                                            </div>
+                                            <div class="col-8">
+                                              <div id="settingFeaturedBookmarks" class="btn-group">
+                                                <button class="btn btn-link active" data-setting="featuredYes" data-value="true">Show</button>
+                                                <button class="btn btn-link" data-setting="featuredNo" data-value="false">Hide</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          
+                                        </div>
+                                
+                                        <div class="divider"></div>
+                                        <div class="pt-10"></div>
+                                        <h6>Background</h6>
+                                        <div class="form-horizontal">
+                                          <div class="form-group">
+                                            <div class="col-4">
+                                              <label class="form-label">Type</label>
+                                            </div>
+                                            <div class="col-8">
+                                              <div id="settingBackground" class="btn-group">
+                                                <button class="btn btn-link" data-setting="bgAuto" data-value="Auto">Auto</button>
+                                                <button class="btn btn-link active" data-setting="bgCustom" data-value="Custom">Custom</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          
+                                          <div id="customBackground" style="display: block;">
+                                            <!-- <div class="form-group">
+                                              <div class="col-4">
+                                                <label class="form-label">Random</label>
+                                              </div>
+                                              <div class="col-4">
+                                                <button id="generateBgImage" class="btn btn-link">Click to Generate</button>
+                                              </div>
+                                              <div class="col-4">
+                                                <div id="generatedBgImage" class="rounded"></div>
+                                              </div>
+                                            </div> -->
+                                            <div class="form-group">
+                                              <div class="col-4">
+                                                <label class="form-label">Custom Link</label>
+                                              </div>
+                                              <div class="col-8">
+                                                <div class="input-group">
+                                                  <button id="clearBgImage" class="btn btn-default input-group-btn"><i class="icon icon-cross"></i></button>
+                                                  <input class="form-input" type="text" data-setting="bgURL" placeholder="Image url....">
+                                                  <button id="setBgImage" class="btn btn-default input-group-btn">Set</button>
+                                                </div>
+                                                <small><strong>Info: </strong>Use with Dropbox or other image hosting.</small>
+                                              </div>
+                                            </div>
+                                            <div class="pt-10"></div>
+                                            <div class="form-group">
+                                              <div class="col-4">
+                                                <label class="form-label">Unsplash.com</label>
+                                              </div>
+                                              <div class="col-8">
+                                                <button data-id="getUnsplashBg" data-setting="2Kd" class="btn btn-link">Daily 2K</button>
+                                                <button data-id="getUnsplashBg" data-setting="5Kd" class="btn btn-link">Daily 5K</button>
+                                                <button data-id="getUnsplashBg" data-setting="2Kw" class="btn btn-link">Weekly 2K</button>
+                                                <button data-id="getUnsplashBg" data-setting="5Kw" class="btn btn-link">Weekly 5K</button>
+                                                <div class="input-group">
+                                                  <input class="form-input" type="text" data-setting="bgKeywords" placeholder="Optional keywords...">
+                                                  <button id="setBgKeywords" class="btn btn-default input-group-btn">Set</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="form-group">
+                                              <div class="col-4"></div>
+                                              <div class="col-8">
+                                                <small><strong>Info: </strong>Click on one of the links above to generate a custom background link which will change the background daily or weekly automaticly. You can input keywords (nature, animals).</small>
+                                              </div>
+                                            </div>
+                                            <div class="pt-10"></div>
+                                            <div class="form-group">
+                                              <div class="col-4">
+                                                <label class="form-label">Plain Color</label>
+                                              </div>
+                                              <div class="col-4">
+                                                <div class="input-group">
+                                                  <button id="clearBgColor" class="btn btn-default input-group-btn"><i class="icon icon-cross"></i></button>
+                                                  <input class="form-input jscolor" type="text" data-setting="bgColor" autocomplete="off" style="background-image: none; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);">
+                                                  <button id="setBgColor" class="btn btn-default input-group-btn">Set</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="form-group">
+                                              <div class="col-4">
+                                                <label class="form-label">Opacity</label>
+                                              </div>
+                                              <div class="col-8">
+                                                <input class="slider" type="range" min="0" max="1" step="0.1" value="1" data-setting="bgOpacity">
+                                              </div>
+                                            </div>
+                                          </div>
+                                          
+                                        </div>
+                                
+                                        <div class="divider"></div>
+                                        <div class="pt-10"></div>
+                                        <h6>To-Do</h6>
+                                        <div class="form-horizontal">
+                                          <div class="form-group">
+                                            <div class="col-4">
+                                              <label class="form-label">Menu Link</label>
+                                            </div>
+                                            <div class="col-8">
+                                              <div id="settingTodoShow" class="btn-group">
+                                                <button class="btn btn-link active" data-setting="todoYes" data-value="true">Show</button>
+                                                <button class="btn btn-link" data-setting="todoNo" data-value="false">Hide</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          
+                                          <div id="showTodo">
+                                            <div class="form-group">
+                                              <div class="col-4">
+                                                <label class="form-label">Provider</label>
+                                              </div>
+                                              <div class="col-8">
+                                                <div id="settingTodoProvider" class="btn-group">
+                                                  <select class="form-select">
+                                                      <option value="not-selected" selected="">Not Selected</option>
+                                                      <option value="local">Aurora To-Do</option>
+                                                      <option value="https://todo.microsoft.com">Microsoft To-Do</option>
+                                                      <option value="https://keep.google.com/">Google Keep</option>
+                                                      <option value="https://todoist.com/app">Todoist</option>
+                                                      <option value="https://www.rememberthemilk.com/app/">Remember The Milk</option>
+                                                      <option value="https://www.wunderlist.com/webapp">Wunderlist</option>
+                                                    </select>
+                                                </div>
+                                                <div class="pt-10"></div>
+                                                <div class="pt-10"></div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          
+                                        </div>
+                                        <div class="divider"></div>
+                                        <div class="pt-10"></div>
+                                        <div class="form-horizontal">
+                                        <div class="form-group">
+                                          <div class="col-4">
+                                            <label class="form-label">Reset</label>
+                                          </div>
+                                          <div class="col-8">
+                                              <a href="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/aurora.html" id="masterReset" class="text-error">Reset Aurora</a>
+                                              <div class="pt-10"></div>
+                                              <small><strong>Warning: </strong>By clicking this link you will loose all your Notes,
+                                              <br>To-Do's and other settings.</small>
+                                          </div>
+                                        </div>
+                                        
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                
+    <div id="modalWhatsNew" class="modal modal-md">
+                                      <div class="modal-overlay"></div>
+                                      <div class="modal-container">
+                                        <div class="modal-header"></div>
+                                        <div class="modal-body">
+                                          <div class="content text-center">
+                                    
+                                            <img src="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/images/aurora-icon.svg" width="64" height="64">
+                                            <div class="pt-10"></div>
+                                            <div class="pt-10"></div>
+                                            <h4>Welcome to Aurora <span data-ver="appVer">1.2.2</span></h4>
+                                            <div class="columns col-gapless">
+                                              <div class="column col-2"></div>
+                                              <div class="column col-8 text-left">
+                                                <div class="divider"></div>
+                                                <dl>
+                                                  <dt>What's New:</dt>
+                                                  <dd>• Fixed issue with the rating star. Click once<br>&nbsp;&nbsp;and the animation will go</dd>
+                                                  <dd>• Removed feedback forum. You can still use google feedback</dd>
+                                                  <dt>Dashboard</dt>
+                                                  <dd>• Added unlimited custom backgrounds rotating daily or weekly<br>&nbsp;&nbsp;from Unsplash.com</dd>
+                                                  <dd>• Featured bookmarks added to the Dashboard</dd>
+                                                  <dt>Bookmarks</dt>
+                                                  <dd>• Updated Bookmarks FAQ</dd>
+                                                  <dd>• Fixed issues with Edit Bookmarks window</dd>
+                                                </dl>
+                                                <div class="divider"></div>
+                                                <div class="column col-12 text-center">
+                                                  <small>If you like this extention, please rate your experience by clicking the star icon in the top right-hand corner. More stars = more users = more features. Thanks!</small>
+                                                </div>
+                                              </div>
+                                              <div class="column col-2"></div>
+                                            </div>
+                                    
+                                            <div class="columns col-gapless">
+                                              <div class="column col-4"></div>
+                                              <div class="column col-4"><button class="btn btn-block btn-primary" id="gotIt">Got it</button></div>
+                                              <div class="column col-4"></div>
+                                            </div>
+                                            <div class="pt-10"></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    
+                                    
+
+    <script src="./New Tab_files/js"></script>
+    <script type="text/javascript" src="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/scripts/vendors-min.js"></script>
+    <script type="text/javascript" src="chrome-extension://mjmipbogglnbgcabealdgbfdkpochcjg/scripts/aurora-min.js"></script>
+
+
+<div id="auroraLoading" style="display: none;">
+    <div class="loading-overlay centered">
+        <div class="loading"></div>
+    </div>
+</div>
+
+
+<div class="autocomplete-suggestions " style="top: 562.5px; left: 2630px; width: 500px;"></div><div class="pac-container pac-logo" style="display: none; width: 0px; position: absolute; left: 0px; top: 0px;"></div></body></html>
