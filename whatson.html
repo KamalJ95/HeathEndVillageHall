@@ -28,6 +28,7 @@
     </head>
 
 
+
     <script>
     $(document).ready(function () {
         // Plugin initialization
@@ -36,9 +37,14 @@
 
         $('.carousel').carousel();
 
+        $(document).ready(function(){
+       $('.parallax').parallax();
+     });
+
 
     })
     </script>
+
     <body>
 
       <header>
@@ -46,11 +52,11 @@
         <nav class="nav-class">
         <image src="assets/heathendlogo.png"/ class="img" >
         <ul id="nav-mobile" class="right">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="whatson.html">Whats on</a></li>
-          <li><a href="roominfo.html">Room Information</a></li>
-            <li><a href="venue.html">Venue Details</a></li>
-            <li><a href="enquiries.html">Enquiries</a></li>
+          <li><a href="index.html"><image src="https://image.flaticon.com/icons/svg/609/609803.svg" class="email-img"> Home</a></li>
+          <li><a href="whatson.html"> <image src="https://image.flaticon.com/icons/svg/788/788893.svg" class="email-img"> Whats on</a></li>
+          <li><a href="roominfo.html"> <image src="https://image.flaticon.com/icons/svg/1006/1006542.svg" class="email-img"> Room Information</a></li>
+            <li><a href="venue.html"><image src="https://image.flaticon.com/icons/svg/149/149061.svg" class="email-img"> Venue Details</a></li>
+            <li><a href="enquiries.html"><image src="https://image.flaticon.com/icons/svg/148/148992.svg" class="email-img"> Enquiries</a></li>
         </ul>
       </div>
     </nav>
@@ -61,31 +67,16 @@
 
     <main>
 
-      <div class="slider">
-        <ul class="slides">
+      <div class="parallax-container">
+        <div class="parallax">
+          <img src="assets/hireinfocut.png">
+        </div>
           <li>
-            <img src="assets/heathendoutdoors.jpg" alt="">
             <div class="caption center-align">
-              <h3>Whats on:</h3>
-              <h5 class="white-text">We hold a variety of events. Have a look below to see a selection of what we have on at the Heath End Village Hall</h5>
+              <h3 class="white-text center"> <image src="https://image.flaticon.com/icons/svg/788/788893.svg" class="venue-img"> Whats on:</h3>
+              <h5 class="white-text center">To find out more about what is on scroll down or view the calendars on venue details. </h5>
             </div>
-          </li>
-          <li>
-            <img src="http://www.heathendvillagehall.co.uk/communities/4/004/013/541/484/images/4631789627.jpg" alt="">
-            <div class="caption left-align">
-              <h3>Whats on:</h3>
-              <h5 class="white-text">The Jeffrey room can be hired out for smaller capacity events. Take a look at Hire Information for further information.</h5>
-            </div>
-          </li>
-          <li>
-            <img src="http://www.heathendvillagehall.co.uk/communities/4/004/013/541/484/images/4631789626.jpg" alt="">
-            <div class="caption right-align">
-              <h3>Whats on:</h3>
-              <h5 class="white-text">The Main room can be hired out for larger capacity events. Take a look at Hire Information for further information.</h5>
-            </div>
-          </li>
-        </ul>
-      </div>
+        </div>
 
       <div class="row">
         <div class="col s3">
@@ -297,10 +288,10 @@
                     <div class="card-reveal">
                     <div class="card">
                       <div class="card-image center waves-effect waves-block waves-light">
-                        <img class="activator" src="">
+                        <img class="activator" src="https://images.pexels.com/photos/221247/pexels-photo-221247.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
                 </div>
                 <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4"><b>TMSS</b><i class="material-icons right">more_vert</i></span>
+                  <span class="card-title activator grey-text text-darken-4"><b>Good for Mums Hiit Fix</b><i class="material-icons right">more_vert</i></span>
                   <p><b>Click the card for more information.</b></p>
                 </div>
                 <div class="card-reveal">
