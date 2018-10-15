@@ -1,28 +1,21 @@
 <?php
+if(isset($_POST['submit'])){
+    $to = "kamalxjahah@hotmail.co.uk"; // this is your Email address
+    $from = $_POST['kamalxjahah@hotmail.co.uk']; // this is the sender's Email address
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $email = $_POST['email'];
+    $message = $_POST['textarea1'];
+    $subject = "Form submission";
+    $subject2 = "Copy of your form submission";
+    $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['textarea1'];
+    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['text'];
 
-// Get values from form
-$name=$_POST['name'];
-$city=$_POST['city'];
-$phone=$_POST['phone'];
-$email=$_POST['email'];
-
-$to = "kamalxjahah@hotmail.co.uk";
-$subject = "Future Tutorials Contact Form Test";
-$message = " Name: " . $name . "\r\n City: " . $city . "\r\n Phone: " . $phone . "\r\n Email: " . $email;
-
-
-$from = "FutureTutorials";
-$headers = "From:" . $from . "\r\n";
-$headers .= "Content-type: text/plain; charset=UTF-8" . "\r\n";
-
-if(@mail($to,$subject,$message,$headers))
-{
-  print "<script>document.location.href='enquiries.html';</script>";
-  // Created by Future Tutorials
-}else{
-  echo "Error! Please try again.";
-}
-
-
-
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    }
 ?>
