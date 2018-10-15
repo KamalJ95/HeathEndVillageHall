@@ -1,3 +1,23 @@
+<?php
+if(isset($_POST['submit'])){
+    $to = "jahah_kamal@network.lilly.com"; // this is your Email address
+    $from = $_POST['jahah_kamal@network.lilly.com']; // this is the sender's Email address
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $subject = "Form submission";
+    $subject2 = "Copy of your form submission";
+    $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
+    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
+
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    }
+?>
+
 <!DOCTYPE html>
   <html>
     <head>
@@ -53,13 +73,69 @@ $(document).ready(function () {
     $('.carousel').carousel();
 
 
-})
+    $('select').formSelect();
+
+
+
+});
+
 </script>
 
     <main>
 
+<div class="row">
+      <form class="col s8 offset-s2" method ="post" action= '' accept-charset='UTF-8'>
+            <div class="row">
+              <h1>Contact Us</h1>
+              <div class="input-field col s6">
+                <i class="material-icons right">person</i>
+                <input name="first_name" type="text" class="validate">
+                <label for="first_name">First Name</label>
+              </div>
+              <div class="input-field col s6">
+                  <i class="material-icons right">person</i>
+                <input name="last_name" type="text" class="validate">
+                <label for="last_name">Last Name</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                 <select>
+                   <option value="active">Please Select:</option>//
+                   <option value="1">Make/Amend a Booking</option>
+                   <option value="2">Request venue information</option>
+                   <option value="3">General query</option>
+                 </select>
+                 <label>Please select a reason for your query:</label>
 
-  Just put the email template here :)
+               </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s12">
+                  <i class="material-icons right">mail</i>
+                <input name="email" type="text" class="validate">
+                <label for="email">Email</label>
+              </div>
+            </div>
+            <div class ="row">
+            <div class="input-field col s12">
+                    <i class="material-icons right">create</i>
+                  <textarea id="textarea1" class="materialize-textarea"></textarea>
+                  <label for="textarea1">Message</label>
+
+
+                </div>
+                <div class="row">
+          <button class="btn waves-effect waves-light" type="submit" name="action" value = "Send Form" >Submit
+              <i class="material-icons right">cloud</i>
+          </button>
+      </div>
+
+      </div>
+          </form>
+        </div>
+
 
     </main>
 
