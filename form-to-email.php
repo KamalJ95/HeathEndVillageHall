@@ -1,7 +1,9 @@
 <?php
+$first_name = $last_name = $to = $from = $email = $message = $subject = $subject2
+= $message = $message2 = $headers = $headers2 = "";
 if(isset($_POST['submit'])){
-    $to = "kamalxjahah@hotmail.co.uk"; // this is your Email address
-    $from = $_POST['kamalxjahah@hotmail.co.uk']; // this is the sender's Email address
+    $to = "jahah_kamal@network.lilly.com"; // this is your Email address
+    $from = $_POST['jahah_kamal@network.lilly.com']; // this is the sender's Email address
     $first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
     $email = $_POST['email'];
@@ -18,4 +20,5 @@ if(isset($_POST['submit'])){
     echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
     // You can also use header('Location: thank_you.php'); to redirect to another page.
     }
+
 ?>
