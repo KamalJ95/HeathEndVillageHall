@@ -1,23 +1,13 @@
 <?php
-$first_name = $last_name = $to = $from = $email = $message = $subject = $subject2
-= $message = $message2 = $headers = $headers2 = "";
-if(isset($_POST['submit'])){
-    $to = "jahah_kamal@network.lilly.com"; // this is your Email address
-    $from = $_POST['jahah_kamal@network.lilly.com']; // this is the sender's Email address
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
-    $email = $_POST['email'];
-    $message = $_POST['textarea1'];
-    $subject = "Form submission";
-    $subject2 = "Copy of your form submission";
-    $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['textarea1'];
-    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['textarea1'];
-    $headers = "From:" . $from;
-    $headers2 = "From:" . $to;
-    mail($to,$subject,$message,$headers);
-    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
-    header('Location: index.html')
-    // You can also use header('Location: thank_you.php'); to redirect to another page.
-    }
-
+$name = $_POST['name'];
+$email = $_POST['email'];
+$phone = $_POST['phone'];
+$request = $_POST['request'];
+$message = $_POST['message'];
+$formcontent=" From: $name \n Phone: $phone \n  Request: $request \n Message: $message";
+$recipient = "jahah_kamal@network.lilly.com";
+$subject = "Contact Form";
+$mailheader = "From: $email \r\n";
+mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
+echo "Thank You!" . " -" . "<a href='enquiries.html' style='text-decoration:none;color:#ff0099;'> Return Home</a>";
 ?>
