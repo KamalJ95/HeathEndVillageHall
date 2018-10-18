@@ -1,5 +1,5 @@
 <?php
-if (isset($_POST['name']) && isset($_POST['subject']) && isset($_POST['mail']) && isset($_POST['message'])) {
+if (isset($_POST['name']) || isset($_POST['subject']) || isset($_POST['mail']) || isset($_POST['message'])) {
   $name = $_POST['name'];
   echo $name;
   $subject = $_POST['subject'];
