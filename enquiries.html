@@ -11,6 +11,8 @@
 
       <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
+      <link rel="stylesheet" href="form.css" >
+
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -44,48 +46,112 @@
   </header>
 
 
-<script>
-$(document).ready(function () {
-    // Plugin initialization
-    $('.slider').slider();
+  <script>
+  $(function()
+  {
+      function after_form_submitted(data)
+      {
+          if(data.result == 'success')
+          {
+              $('form#reused_form').hide();
+              $('#success_message').show();
+              $('#error_message').hide();
+          }
+          else
+          {
+              $('#error_message').append('<ul></ul>');
+
+              jQuery.each(data.errors,function(key,val)
+              {
+                  $('#error_message ul').append('<li>'+key+':'+val+'</li>');
+              });
+              $('#success_message').hide();
+              $('#error_message').show();
+
+              //reverse the response on the button
+              $('button[type="button"]', $form).each(function()
+              {
+                  $btn = $(this);
+                  label = $btn.prop('orig_label');
+                  if(label)
+                  {
+                      $btn.prop('type','submit' );
+                      $btn.text(label);
+                      $btn.prop('orig_label','');
+                  }
+              });
+
+          }//else
+      }
+
+  	$('#reused_form').submit(function(e)
+        {
+          e.preventDefault();
+
+          $form = $(this);
+          //show some response on the button
+          $('button[type="submit"]', $form).each(function()
+          {
+              $btn = $(this);
+              $btn.prop('type','button' );
+              $btn.prop('orig_label',$btn.text());
+              $btn.text('Sending ...');
+          });
 
 
-    $('.carousel').carousel();
+                      $.ajax({
+                  type: "POST",
+                  url: 'handler.php',
+                  data: $form.serialize(),
+                  success: after_form_submitted,
+                  dataType: 'json'
+              });
 
-
-    $('select').formSelect();
-
-
-
-});
-
-</script>
+        });
+  });
+  </script>
 
     <main>
 
-      <div class = "row">
-      <div class="col s8 offset-s2"
-      <form id = "form-to-email.php" action="form-to-email.php" method="POST">
-      <p>Name</p> <input type="text" name="name">
-      <p>Email</p> <input type="text" name="email">
-      <p>Phone</p> <input type="text" name="phone">
-
-
-      <p>Type of Request</p>
-      <select name="request" size="1">
-        <option value="1">Make/Amend a Booking</option>
-        <option value="2">Request venue information</option>
-        <option value="3">General query</option>
-      </select>
-      <br/>
-
-      <p>Message</p><textarea name="message" rows="6" cols="25"></textarea><br/>
-
-      <input type="submit" value = "Submit Request" class="waves-effect waves-light btn"></a>
-      </form>
-
-
-        </div>
+      <div class="imagebg"></div>
+      	<div class="container">
+      		<div class="form-container z-depth-5">
+      			<h3>Contact Form</h3>
+      			<div class="row">
+  			    <form class="col s12" id="reused_form">
+  			      <div class="row">
+  			        <div class="input-field col s12">
+  			          <input id="name" type="text" name="name" required class="validate">
+  			          <label for="name">Name</label>
+  			        </div>
+  			      </div>
+  			      <div class="row">
+  			        <div class="input-field col s12">
+  			          <input id="email" type="email" name="email" required class="validate">
+  			          <label for="email">Email</label>
+  			        </div>
+  			      </div>
+  			      <div class="row">
+  			        <div class="input-field col s12">
+  			          <textarea id="message" name="message" class="materialize-textarea" class="validate"
+  			          ></textarea>
+  			          <label for="message">Message</label>
+  			        </div>
+  			      </div>
+  			       <div>
+  				    	<button class="waves-effect waves-light btn submitbtn" type="submit">Submit</button>
+  				    </div>
+  			    </form>
+  			    <div id="error_message" style="width:100%; height:100%; display:none; ">
+  		            <h4>Error</h4>
+  		            Sorry there was an error sending your form.
+  			    </div>
+  			    <div id="success_message" style="width:100%; height:100%; display:none; ">
+  					<h4>Success! Your Message was Sent Successfully.</h4>
+  			    </div>
+  			  </div>
+      		</div>
+      	</div>
 
 
     </main>
