@@ -2,7 +2,10 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+/*
+Tested working with PHP5.4 and above (including PHP 7 )
 
+ */
 require_once './vendor/autoload.php';
 
 use FormGuide\Handlx\FormHandler;
@@ -18,6 +21,6 @@ $validator->field('message')->maxLength(6000);
 
 
 
-$pp->sendEmailTo('jahah_kamal@network.lilly.com');
+$pp->sendEmailTo('kamalxjahah@hotmail.co.uk'); // ← Your email here
 
 echo $pp->process($_POST);
