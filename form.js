@@ -27,7 +27,7 @@ $(function()
                 label = $btn.prop('orig_label');
                 if(label)
                 {
-                    $btn.prop('type','submit' ); 
+                    $btn.prop('type','submit' );
                     $btn.text(label);
                     $btn.prop('orig_label','');
                 }
