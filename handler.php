@@ -1,9 +1,9 @@
 <?php
-if (isset($_REQUEST['submit'])) {
-  $name = $_REQUEST['name'];
-  $subject = $_REQUEST['subject'];
-  $mailFrom = $_REQUEST['mail'];
-  $message = $_REQUEST['message'];
+if (isset($_POST['submit'])) {
+  $name = $_POST['name'];
+  $subject = $_POST['subject'];
+  $mailFrom = $_POST['mail'];
+  $message = $_POST['message'];
 
 
   $mailTo = "jahah_kamal@network.lilly.com";
