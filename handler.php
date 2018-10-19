@@ -1,10 +1,12 @@
 <?php
 
-  $name = $_POST['name'];
+  var_dump($_POST);
+
+  $name = $_POST["name"];
   echo $name;
-  $email = $_POST['email'];
+  $email = $_POST["email"];
   echo $email;
-  $message = $_POST['message'];
+  $message = $_POST["message"];
   echo $message;
 
   $to = "joneilstarkie@hotmail.co.uk";
