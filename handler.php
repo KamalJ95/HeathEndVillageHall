@@ -10,5 +10,6 @@
 
   $body = "From: $name\n E-mail: $email\n Subject: $subj\n Message: \n $message";
 
-  mail($to, $subject, $message)
+  mail($to, $subject, $message);
+  header("Location: index.html?mailsend");
 ?>
