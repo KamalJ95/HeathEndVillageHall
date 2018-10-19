@@ -1,23 +1,14 @@
 <?php
-if (isset($_POST['name']) || isset($_POST['subject']) || isset($_POST['mail']) || isset($_POST['message'])) {
+
   $name = $_POST['name'];
-  echo $name;
-  $subject = $_POST['subject'];
-  echo $subject;
-  $mailFrom = $_POST['mail'];
-  echo $mailFrom;
+  $email = $_POST['email'];
+  $subj = $_POST['subject'];
   $message = $_POST['message'];
-  echo $message;
 
+  $to = 'jahah_kamal@network.lilly.com';
+  $subject = 'Message from Contact Form : '.$name;
 
-  $mailTo = "jahah_kamal@network.lilly.com";
-  $headers = "From: ".$mailFrom;
-  $txt = "You have received an e-mail from ".$name.".\n\n".$message;
-  mail($mailTo,$subject, $txt, $headers);
-  header("Location: index.html?mailsend");
-} else {
-  echo "error in post";
-}
+  $body = "From: $name\n E-mail: $email\n Subject: $subj\n Message: \n $message";
 
-
+  mail($to, $subject, $message)
 ?>
