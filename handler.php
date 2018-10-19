@@ -7,8 +7,8 @@
   $to = 'kamalxjahah@hotmail.co.uk';
   $subject = 'Message from Contact Form : '.$name;
 
-  $body = "From: $name\n E-mail: $email\n Message: \n $message";
+  $headers = "From: $name\n E-mail: $email\n Message: \n $messages";
 
-  mail($to, $subject, $message);
+  mail($to, $subject, $message, $headers);
 
 ?>
