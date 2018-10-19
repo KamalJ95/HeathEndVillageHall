@@ -1,11 +1,11 @@
 <?php
 
   $name = $_POST['name'];
-  echo "Name" + $name;
+  echo $name;
   $email = $_POST['email'];
-  echo "Email" + $email;
+  echo $email;
   $message = $_POST['message'];
-  echo "Message" + $message;
+  echo $message;
 
   $to = "joneilstarkie@hotmail.co.uk";
   $subject = "Message from Contact Form : ".$name;
