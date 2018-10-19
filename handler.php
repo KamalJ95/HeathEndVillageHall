@@ -10,5 +10,5 @@
   $headers = "From: $name\n E-mail: $email\n Message: \n $messages";
 
   mail($to, $subject, $message, $headers);
-
+  echo "Mail has been sent";
 ?>
