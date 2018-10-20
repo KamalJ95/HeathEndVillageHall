@@ -9,7 +9,7 @@
   $message = $_POST["message"];
   echo $message;
 
-  $to = "joneilstarkie@hotmail.co.uk";
+  $to = "kamalxjahah@hotmail.co.uk";
   $subject = "Message from Contact Form : ".$name;
 
   $headers = "From: $name\n E-mail: $email\n Message: \n $message";
