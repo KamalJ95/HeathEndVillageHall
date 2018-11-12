@@ -1,18 +1,10 @@
-<?php
-if(isset($_POST['submit'])){
-$to = "kamalxjahah@hotmail.co.uk";
-$from = $_POST['Mail'];
-$first_name = $_POST['first_name'];
-$last_name = $_POST['last_name'];
-$subject = "Mail subject";
-$message = $first_name . " " . $last_name . " Yes: " . "\n\n" .
-$_POST['message'];
-
-$headers = "From:" . $from;
-$headers2 = "From:" . $to;
-mail($to,$subject,$message,$headers);
-echo "Mail Sent. Thank you " . $first_name . ", we will contact you
-shortly.";
-
-}
+<?php $name = $_POST['name'];
+$email = $_POST['email'];
+$message = $_POST['message'];
+$formcontent = "From: $name \n Message: $message";
+$recipient = "jahah_kamal@network.lilly.com";
+$subject = "Contact Form";
+$mailheader = "From: $email \r\n";
+mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
+echo "Thank You!";
 ?>

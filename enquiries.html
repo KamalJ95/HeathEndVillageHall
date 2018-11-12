@@ -19,7 +19,6 @@
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
 
-
       <title>
           Heath End Town Hall
       </title>
@@ -43,50 +42,28 @@
 
     <main>
 
-<<<<<<< HEAD
-      <form action="jahah_kamal@network.lilly.com" method="post" enctype="text/plain" >
-          FirstName:<input type="text" name="FirstName">
-            Email:<input type="text" name="Email">
-            <input type="submit" name="submit" value="Submit">
-          </form>
-
-=======
-      <?php include 'handler.php';?>
-      <form class="col s12" method="post" action="handler.php">
-        <div class="row">
-          <div class="input-field col s6">
-            <i class="material-icons prefix">info</i>
-            <input id="first_name" type="text" class="validate">
-            <label for="first_name">Name</label>
-          </div>
-          <div class="input-field col s6">
-            <i class="material-icons prefix">info</i>
-            <input id="last_name" type="text" class="validate">
-            <label for="last_name">Surname</label>
-          </div>
+      <div class="row" id="contact-row">
+    <form action="handler.php" method="POST" class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="first_name" type="text" class="validate" name="name">
+          <label for="first_name">Full Name</label>
         </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <i class="material-icons prefix">phone</i>
-            <input id="Mail" type="email" class="validate">
-            <label for="Mail">E-mail</label>
-          </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="text" class="validate" name="email">
+          <label for="email">Email</label>
         </div>
-          <div class="row">
-              <form class="col s12">
-              <div class="row">
-                  <div class="input-field col s12">
-                  <i class="material-icons prefix">chat</i>
-                  <textarea id="message" class="materialize-textarea"></textarea>
-                  <label for="message">Message</label>
-                  </div>
-              </div>
-      <button class="btn waves-effect waves-light" type="submit"
-      name="action">Send
-      <i class="material-icons right">send</i>
-      </button>
-              </form>
->>>>>>> b158d1d8923c235f8ab90ff8b9c98b04c5b15d38
+      </div>
+        <div class="row">
+        <div class="input-field col s12">
+          <textarea id="message" class="materialize-textarea" type="text" name="messsage"></textarea>
+          <label for="textarea1">Message</label>
+        </div>
+      </div>
+       <input type="submit" value="Send">
+    </form>
     </main>
 
 
