@@ -1,23 +1,47 @@
 <?php
-$prenom = !empty($_POST['first_name']) ? $_POST['first_name'] : NULL;
-$nom = !empty($_POST['last_name']) ? $_POST['last_name'] : NULL;
-$from = !empty($_POST['email']) ? $_POST['email'] : NULL;
-$msg = !empty($_POST['message']) ? $_POST['message'] : NULL;
-$tel = !empty($_POST['phone']) ? $_POST['phone'] : NULL;
-$headers = 'From: WEBSITE E-MAIL';
-//  echo "$msg" . "$nom" . "$from";
 
-if(empty($prenom) || empty($nom) || empty($from) || empty($msg))
-{
-     echo 'Mail couldn't be send, a fiel is empty';
+if(!empty($_POST['first_name']) and !empty($_POST['email']) and !empty($_POST['textarea1'])) {
+
+$email_to = "jahah_kamal@network.lilly.com";
+
+$email_subject = "Customer Message";
+
+$sender = $_POST['first_name']; // required
+
+$email_from = $_POST['email']; // required
+
+$comments = $_POST['textarea1']; // required
+
+$email_message = "Form Details:\n\n";
+
+
+
+function clean_string($string) {
+
+  $bad = array("content-type","bcc:","to:","cc:","href");
+
+  return str_replace($bad,"",$string);
+
 }
-elseif(mail('EMAIL ADRESS', "Commande Amarrex de $prenom $nom", "$prenom $nom a ecrit : $msg \n\n\n E-mail de contact : $from\n\n Telephone : $tel", "$headers"))
-{
-     echo 'Mail sent.';
-}
-else
-{
-    echo 'mail not sent, unexpected error';
-}
-// }
+
+
+
+$email_message .= "Name: ".clean_string($sender)."\n";
+
+$email_message .= "Email: ".clean_string($email_from)."\n";
+
+$email_message .= "Message: ".clean_string($comments)."\n";
+
+$headers = 'From: '.$email_from."\r\n".
+
+'Reply-To: '.$email_from."\r\n" .
+
+'X-Mailer: PHP/' . phpversion();
+
+@mail($email_to, $email_subject, $email_message, $headers);
+echo "<script type='text/javascript'>$('#modal1').openModal();</script>";
 ?>
+
+<?php
+
+}
