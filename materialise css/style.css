@@ -42,6 +42,8 @@
 
   }
 
+  
+
   .card-rooms {
     height: 600px;
   }
@@ -287,4 +289,19 @@
 .room-info-text{
   font: Sans;
   color: black;
+}
+
+.slider .slides {
+   background-color: transparent;
+   margin-top: 0;
+   height: 400px;
+
+}
+
+.slider .slides li img {
+   max-height: 100%;
+   max-width: 100%;
+   background-position: center;
+
+   background-repeat: no-repeat;
 }

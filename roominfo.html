@@ -24,20 +24,29 @@
     </head>
     <body>
 
-      <header>
-      <div class="nav-wrapper">
-        <nav class="nav-class">
-        <image src="assets/heathendlogo.png"/ class="img" >
-        <ul id="nav-mobile" class="right">
-          <li><a href="index.html"><image src="https://image.flaticon.com/icons/svg/609/609803.svg" class="email-img"> Home</a></li>
-          <li><a href="whatson.html"> <image src="https://image.flaticon.com/icons/svg/788/788893.svg" class="email-img"> Whats on</a></li>
-          <li><a href="roominfo.html"> <image src="https://image.flaticon.com/icons/svg/1006/1006542.svg" class="email-img"> Hire Information</a></li>
-            <li><a href="venue.html"><image src="https://image.flaticon.com/icons/svg/149/149061.svg" class="email-img"> Venue Details</a></li>
-            <li><a href="enquiries.html"><image src="https://image.flaticon.com/icons/svg/148/148992.svg" class="email-img"> Enquiries</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+      <nav class="nav-class">
+    <div class="nav-wrapper">
+      <image src="assets/heathendlogo.png"/ class="img" >
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.html"><image src="https://image.flaticon.com/icons/svg/609/609803.svg" class="email-img"> Home</a></li>
+        <li><a href="whatson.html"> <image src="https://image.flaticon.com/icons/svg/788/788893.svg" class="email-img"> Whats on</a></li>
+        <li><a href="roominfo.html"> <image src="https://image.flaticon.com/icons/svg/1006/1006542.svg" class="email-img"> Hire Information</a></li>
+          <li><a href="venue.html"><image src="https://image.flaticon.com/icons/svg/149/149061.svg" class="email-img"> Venue Details</a></li>
+          <li><a href="enquiries.html"><image src="https://image.flaticon.com/icons/svg/148/148992.svg" class="email-img"> Enquiries</a></li>
+      </ul>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="index.html"><image src="https://image.flaticon.com/icons/svg/609/609803.svg" class="email-img"> Home</a></li>
+    <li><a href="whatson.html"> <image src="https://image.flaticon.com/icons/svg/788/788893.svg" class="email-img"> Whats on</a></li>
+    <li><a href="roominfo.html"> <image src="https://image.flaticon.com/icons/svg/1006/1006542.svg" class="email-img"> Hire Information</a></li>
+      <li><a href="venue.html"><image src="https://image.flaticon.com/icons/svg/149/149061.svg" class="email-img"> Venue Details</a></li>
+      <li><a href="enquiries.html"><image src="https://image.flaticon.com/icons/svg/148/148992.svg" class="email-img"> Enquiries</a></li>
+  </ul>
+  </ul>
 
 
 <script>
@@ -186,6 +195,67 @@ $(document).ready(function () {
 </div>
 </div>
 
+
+
+<div class="card">
+<div class = "container">
+<form class="col s4 offset-s2" method ="POST" name = "myemailform" action= 'form-to-email.php' accept-charset='UTF-8'>
+  <div class="row">
+    <h1>Contact Us</h1>
+    <div class="input-field col s12">
+      <i class="material-icons right">person</i>
+      <input  name="first_name" type="text" class="validate">
+      <label for="first_name">First Name</label>
+    </div>
+    <div class="input-field col s12">
+        <i class="material-icons right">person</i>
+      <input name="last_name" type="text" class="validate">
+      <label for="last_name">Last Name</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+       <select>
+         <option value="active">Please Select:</option>
+         <option value="1">Make/Amend a Booking</option>
+         <option value="2">Request venue information</option>
+         <option value="3">General query</option>
+       </select>
+       <label>Please select a reason for your query:</label>
+
+     </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field col s12">
+        <i class="material-icons right">mail</i>
+      <input name="email" type="text" class="validate">
+      <label for="email">Email</label>
+    </div>
+  </div>
+<div class ="row">
+<div class="input-field col s12">
+          <i class="material-icons right">create</i>
+        <textarea id="textarea1" class="materialize-textarea"></textarea>
+        <label for="textarea1">Message</label>
+
+
+      </div>
+      <div class="row">
+<button class="btn waves-effect waves-light" type="submit" name="action" value = "Send Form" >Submit
+    <i class="material-icons right">cloud</i>
+</button>
+</div>
+
+</div>
+</form>
+</div>
+</div>
+
+
+
+
+
     </main>
 
 
@@ -220,3 +290,16 @@ $(document).ready(function () {
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     </body>
   </html>
+
+  <script>
+
+
+  $(document).ready(function(){
+      $('select').formSelect();
+
+
+           $('.sidenav').sidenav();
+    });
+
+
+  </script>

@@ -8,14 +8,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"  media="screen,projection"/>
 
       <link href="materialise css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-
-      <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-
-
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-
+      <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
       <!--JQuery-->
 
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -28,20 +24,29 @@
     </head>
     <body>
 
-      <header>
-      <div class="nav-wrapper">
-        <nav class="nav-class">
-        <image src="assets/heathendlogo.png"/ class="img" >
-        <ul id="nav-mobile" class="right">
-          <li><a href="index.html"><image src="https://image.flaticon.com/icons/svg/609/609803.svg" class="email-img"> Home</a></li>
-          <li><a href="whatson.html"> <image src="https://image.flaticon.com/icons/svg/788/788893.svg" class="email-img"> Whats on</a></li>
-          <li><a href="roominfo.html"> <image src="https://image.flaticon.com/icons/svg/1006/1006542.svg" class="email-img"> Hire Information</a></li>
-            <li><a href="venue.html"><image src="https://image.flaticon.com/icons/svg/149/149061.svg" class="email-img"> Venue Details</a></li>
-            <li><a href="enquiries.html"><image src="https://image.flaticon.com/icons/svg/148/148992.svg" class="email-img"> Enquiries</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+      <nav class="nav-class">
+    <div class="nav-wrapper">
+      <image src="assets/heathendlogo.png"/ class="img" >
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.html"><image src="https://image.flaticon.com/icons/svg/609/609803.svg" class="email-img"> Home</a></li>
+        <li><a href="whatson.html"> <image src="https://image.flaticon.com/icons/svg/788/788893.svg" class="email-img"> Whats on</a></li>
+        <li><a href="roominfo.html"> <image src="https://image.flaticon.com/icons/svg/1006/1006542.svg" class="email-img"> Hire Information</a></li>
+          <li><a href="venue.html"><image src="https://image.flaticon.com/icons/svg/149/149061.svg" class="email-img"> Venue Details</a></li>
+          <li><a href="enquiries.html"><image src="https://image.flaticon.com/icons/svg/148/148992.svg" class="email-img"> Enquiries</a></li>
+      </ul>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="index.html"><image src="https://image.flaticon.com/icons/svg/609/609803.svg" class="email-img"> Home</a></li>
+    <li><a href="whatson.html"> <image src="https://image.flaticon.com/icons/svg/788/788893.svg" class="email-img"> Whats on</a></li>
+    <li><a href="roominfo.html"> <image src="https://image.flaticon.com/icons/svg/1006/1006542.svg" class="email-img"> Hire Information</a></li>
+      <li><a href="venue.html"><image src="https://image.flaticon.com/icons/svg/149/149061.svg" class="email-img"> Venue Details</a></li>
+      <li><a href="enquiries.html"><image src="https://image.flaticon.com/icons/svg/148/148992.svg" class="email-img"> Enquiries</a></li>
+  </ul>
+  </ul>
 
 
 <script>
@@ -52,9 +57,14 @@ $(document).ready(function () {
 
     $('.carousel').carousel();
 
+    $(document).ready(function(){
+   $('.parallax').parallax();
+ });
+
 
 })
 </script>
+
 
     <main>
         <div class="slider">
@@ -88,7 +98,7 @@ $(document).ready(function () {
                         <div class="col s12">
                           <div class="card white lighten-1">
                             <div class="card-content black-text">
-                              <span class="card-title center"> <image src="https://image.flaticon.com/icons/svg/1191/1191608.svg" class="venue-img"> Welcome to Heath End Village Hall</span>
+                              <span class="card-title center" > <image src="https://image.flaticon.com/icons/svg/1191/1191608.svg" class="venue-img" > Welcome to Heath End Village Hall</span>
                               <p>We are a purpose built hall in the village of Baughurst, Hampshire. A number of local organisations use the hall on a regular basis (see timetable) and it is available for private hire for birthday parties, weddings, meetings and other events.
                                  Adjoining the Hall is the Green, providing a large outdoor space that can be used for fetes, sports and other outdoor activities.
                                   For useful information such as hall sizes and prices, check out the hire information page where you can also make a booking.</p>
@@ -101,8 +111,8 @@ $(document).ready(function () {
 
 
                                               <div class="col s4">
-                                              <image src="https://image.flaticon.com/icons/svg/1060/1060282.svg" class="venue-img"></i>
-                                              <span class="card-title"><b>Facilities</b></span>
+                                              <span> <image src="https://image.flaticon.com/icons/svg/1060/1060282.svg" class="venue-img"></i></span>
+                                              <span class="card-title" style="font-size:2vw"><b>Facilities:</b></span>
                                               <p> Furniture</p>
                                               <p> Space (Outdoor)</p>
                                               <p> Space (Private)</p>
@@ -110,14 +120,14 @@ $(document).ready(function () {
 
                                               </div>
                                               <div class="col s4">
-                                              <image src="https://image.flaticon.com/icons/svg/864/864783.svg" class="venue-img"></i>
-                                              <span class="card-title"><b>Equipment: </b></span>
+                                              <span> <image src="https://image.flaticon.com/icons/svg/864/864783.svg" class="venue-img"></i> </span>
+                                              <span class="card-title" style="font-size:2vw"><b> Equipment: </b></span>
                                               <p> Staging Area </p>
 
                                             </div>
                                               <div class="col s4">
-                                                <image src="https://image.flaticon.com/icons/svg/1142/1142757.svg" class="venue-img"></i>
-                                              <span class="card-title "><b>Alcohol and Catering: </b></span>
+                                                <span><image src="https://image.flaticon.com/icons/svg/1142/1142757.svg" class="venue-img"></i></span>
+                                              <span class="card-title " style="font-size:2vw"><b> Alcohol & Catering: </b></span>
                                               <p> Onsite Kitchen </p>
                                               </div>
 
@@ -172,13 +182,17 @@ $(document).ready(function () {
     </main>
 
 
+
+
+
+
         <footer class="page-footer">
                  <div class="container">
                    <div class="row">
                      <div class="col l6 s12">
                       <image src="assets/heathendlogo.png" class="footer-img" >
-                <!--        <p class="footer-links"> <h6><a href style="color:white"="#">Home</a> </p> <p> <a href style="color:white"="#">Whats on</a> </p> <p>    <a href style="color: white"="#">Room Information</a> <p> <a href style="color: white"="#">Venue Details</a>  <a href style="color: white"="#">Enquiries</a> </p>
-                -->   </div>
+        <!--                <p class="footer-links"> <h6><a href style="color:white"="#">Home</a>  <a href style="color:white"="#">Whats on</a>  <a href style="color: white"="#">Room Information</a>  <a href style="color: white"="#">Venue Details</a>  <a href style="color: white"="#">Enquiries</a> </p>
+        -->         </div>
                      <div class="col l4 offset-l2 s12">
                        <h5 class="white-text">Information:</h5>
                        <ul>
@@ -197,9 +211,20 @@ $(document).ready(function () {
                  </div>
                </footer>
 
-
-
       <!--JavaScript at end of body for optimized loading-->
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     </body>
   </html>
+
+  <script>
+
+
+  $(document).ready(function(){
+      $('select').formSelect();
+
+
+           $('.sidenav').sidenav();
+    });
+
+
+  </script>
