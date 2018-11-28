@@ -307,7 +307,7 @@
 .slider .slides {
    background-color: transparent;
    margin-top: 0;
-   height: 400px;
+   height: 600px;
 
 }
 
@@ -315,6 +315,5 @@
    max-height: 100%;
    max-width: 100%;
    background-position: center;
-
    background-repeat: no-repeat;
 }
