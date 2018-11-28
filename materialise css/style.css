@@ -40,9 +40,64 @@
 
 
   .card-image {
-    height: 250px;
+    height: 300px;
 
   }
+
+
+   @media (max-width: 550px) {
+       .big-container {
+           display: none;
+       }
+   }
+   @media (min-width: 550px) {
+       .small-container {
+           display: none;
+       }
+   }
+   /* Responsive iFrame */
+   .responsive-iframe-container {
+       position: relative;
+       padding-bottom: 56.25%;
+       padding-top: 0;
+       height: 0;
+       overflow: hidden;
+   }
+   .responsive-iframe-container iframe,
+   .vresponsive-iframe-container object,
+   .vresponsive-iframe-container embed {
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       padding-bottom: 10px;
+   }
+
+
+   .responsive-iframe-container1 iframe,
+   .vresponsive-iframe-container1 object,
+   .vresponsive-iframe-container1 embed {
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       padding-bottom:0;
+   }
+
+   .responsive-iframe-container1 {
+       position: relative;
+       padding-bottom: 30%;
+       padding-top: 0;
+       height: 0;
+       overflow: hidden;
+   }
+
+
+
+
+
 
   .resp-iframe{
     position: absolute;
