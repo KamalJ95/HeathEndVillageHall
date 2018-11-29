@@ -48,7 +48,6 @@
    @media (max-width: 550px) {
        .big-container {
            display: none;
-           -webkit-overflow-scrolling:touch; overflow:auto;
        }
    }
    @media (min-width: 550px) {
@@ -64,6 +63,7 @@
        height: 0;
        overflow:visible;
        vertical-align:bottom;
+
    }
    .responsive-iframe-container iframe,
    .vresponsive-iframe-container object,
@@ -75,7 +75,6 @@
        height: 99%;
        padding-bottom: 0;
        vertical-align:bottom;
-       -webkit-overflow-scrolling:touch; overflow:auto;
    }
 
 
@@ -89,7 +88,6 @@
        height: 99%;
        padding-bottom:0;
        vertical-align:bottom;
-       -webkit-overflow-scrolling:touch; overflow:auto;
    }
 
    .responsive-iframe-container1 {
