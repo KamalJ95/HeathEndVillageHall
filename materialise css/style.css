@@ -48,6 +48,7 @@
    @media (max-width: 550px) {
        .big-container {
            display: none;
+           -webkit-overflow-scrolling:touch; overflow:auto;
        }
    }
    @media (min-width: 550px) {
