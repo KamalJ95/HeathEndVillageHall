@@ -74,6 +74,7 @@
        height: 99%;
        padding-bottom: 0;
        vertical-align:bottom;
+       display: block;
 
    }
 
@@ -88,6 +89,7 @@
        height: 99%;
        padding-bottom:0;
        vertical-align:bottom;
+       display: block;
    }
 
    .responsive-iframe-container1 {
