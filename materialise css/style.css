@@ -74,7 +74,7 @@
        height: 99%;
        padding-bottom: 0;
        vertical-align:bottom;
-
+       -webkit-overflow-scrolling:touch; overflow:auto;
    }
 
 
@@ -88,6 +88,7 @@
        height: 99%;
        padding-bottom:0;
        vertical-align:bottom;
+       -webkit-overflow-scrolling:touch; overflow:auto;
    }
 
    .responsive-iframe-container1 {
