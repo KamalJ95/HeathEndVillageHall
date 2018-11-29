@@ -61,7 +61,7 @@
        padding-bottom: 56.25%;
        padding-top: 0;
        height: 0;
-       overflow:visible;
+       overflow:hidden;
    }
    .responsive-iframe-container iframe,
    .vresponsive-iframe-container object,
